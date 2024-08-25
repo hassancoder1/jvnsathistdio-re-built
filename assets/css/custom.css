@@ -1,0 +1,49 @@
+* {
+  font-family: "Amaranth", sans-serif;
+  /* font-weight: 300; */
+}
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+[x-cloak] {
+  display: none;
+}
+
+.grid-indigo {
+  background-image: radial-gradient(#5a67d8 2px, transparent 2px);
+  background-size: 16px 16px;
+}
+
+#hero-section.zoom-in {
+  animation: zoomIn 1s forwards;
+}
+
+#hero-section.zoom-out {
+  animation: zoomOut 1s forwards;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(1.05);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomOut {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.05);
+    opacity: 0;
+  }
+}
