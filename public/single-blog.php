@@ -58,7 +58,6 @@ if (isset($urlPath[1]) && !empty($urlPath[1])) {
     $nextPost = $nextResult->fetch_assoc();
 
     $stmt->close();
-    $conn->close();
 } else {
     // Handle the case where slug is not provided
     $post = null;

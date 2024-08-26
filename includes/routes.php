@@ -34,71 +34,6 @@ $routes = [
     ],
 ];
 
-// // Define known paths and their corresponding metadata for admin
-// $adminRoutes = [
-//     '' => [
-//         'file' => 'index.php',
-//         'title' => 'Admin Dashboard',
-//         'description' => 'This is the admin dashboard',
-//     ],
-//     'home' => [
-//         'file' => 'home.php',
-//         'title' => 'Admin Dashboard',
-//         'description' => 'This is the admin dashboard',
-//     ],
-//     'login' => [
-//         'file' => 'login.php',
-//         'title' => 'Login to Admin Dashboard',
-//         'description' => 'Login to Admin Dashboard',
-//     ],
-//     'contact-form' => [
-//         'file' => 'contact-form-data.php',
-//         'title' => 'Contact Form Data',
-//         'description' => 'Contact Form Data Filled by Users.',
-//     ],
-//     'getquote-form' => [
-//         'file' => 'getquote-form-data.php',
-//         'title' => 'Get Quote Form Data',
-//         'description' => 'Get Quote Form Data Filled by Users.',
-//     ],
-//     'hero-slider' => [
-//         'file' => 'hero-slider.php',
-//         'title' => 'Manage Hero Slider Images',
-//         'description' => 'Manage Hero Slider Images',
-//     ],
-//     'photoshoot' => [
-//         'file' => 'photoshoot.php',
-//         'title' => 'Manage PhotoShoot Images',
-//         'description' => 'Manage PhotoShoot Images',
-//     ],
-//     'gallery' => [
-//         'file' => 'gallery.php',
-//         'title' => 'Manage Gallery Images',
-//         'description' => 'Manage Gallery Images',
-//     ],
-//     'blogs' => [
-//         'file' => 'blogs.php',
-//         'title' => 'Manage Blog Posts',
-//         'description' => 'Manage Blog Posts',
-//     ],
-//     'single-blog' => [
-//         'file' => 'edit-blog.php',
-//         'title' => 'Manage Single Blog',
-//         'description' => 'Manage Single Blog',
-//     ],
-//     'settings' => [
-//         'file' => 'settings.php',
-//         'title' => 'Admin Settings',
-//         'description' => 'This is the admin settings page',
-//     ],
-//     'update-images' => [
-//         'file' => 'update-images.php',
-//         'title' => 'Manage Images',
-//         'description' => 'Manage Images',
-//     ],
-// ];
-
-
 $adminRoutes = [
     'login' => [
         'file' => 'login.php',
@@ -180,6 +115,7 @@ $adminRoutes = [
 
 
 $apiRoutes = [
+    "fetchtheme" => "fetchtheme.php",
     "loginform" => "handlelogin.php",
     "logout" => "logout.php",
     "updateaccount" => "updateaccount.php",
@@ -204,8 +140,7 @@ $defaultRoute = [
 
 function check_slug_and_load_blog($slug, $pageDetails)
 {
-    // Here, you should fetch the blog data from your database using the slug
-    // Example: Simulate fetching from the database
+    // ### This function is Not abandond but used a bit. But whole single blog functionality relays on this function. To complete this function you'll have to change many things. So leave it as it's working.
     $found = true; // Replace with actual check from the database
 
     if ($found) {

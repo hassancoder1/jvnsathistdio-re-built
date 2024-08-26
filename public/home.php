@@ -40,26 +40,29 @@ $initialImage = !empty($heroImages) ? $heroImages[0] : getAsset('default-hero.jp
 <!-- HERO SECTION -->
 <div id="hero-section" class="relative isolate bg-cover bg-no-repeat cursor-pointer overflow-hidden" style="background-image: url('<?= $initialImage ?>');" ondblclick="changeBackgroundImage()">
     <div class="w-full h-full bg-slate-950/30 px-6 lg:px-8">
-        <div class="mx-auto max-w-2xl py-32 sm:py-40 lg:py-28">
+        <div class="mx-auto max-w-2xl py-16 sm:py-20 lg:py-12">
             <div class="text-center">
-                <img src="<?= getAsset('logo.svg', 'images/svgs/'); ?>" alt="Logo" class="rounded-full mx-auto w-24 h-24">
+                <div class="w-28 h-28 my-4 bg-white border border-[6px] border-secondary rounded-full flex items-center justify-center mx-auto">
+                    <img src="<?= getAsset('logo.png', 'images/'); ?>" alt="Logo" class="w-full h-full rounded-full object-contain">
+                </div>
                 <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">Capture the Essence of Your
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-secondary to-primary font-bold">Indian Wedding</span>
                 </h1>
-                <p class="mt-3 text-lg leading-5 text-white/90">Experience the magic of your special day through the lens of our talented Indian wedding photographers.</p>
-                <div class="mt-6 flex items-center justify-center gap-x-6">
+                <p class="mt-4 text-lg leading-5 text-white/90">Experience the magic of your special day through the lens of our talented Indian wedding photographers.</p>
+                <div class="mt-9 flex items-center justify-center gap-x-6">
                     <a href="/#about" class="rounded-full bg-primary px-4 py-2.5 text-sm font-semibold text-bgPrimary shadow-sm hover:bg-primary/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary transition group">Learn more <i class="fa fa-arrow-down ml-2 transition-transform duration-300 transform group-hover:translate-y-1"></i></a>
                 </div>
                 <div class="flex items-center justify-center">
-                    <div class="mt-10 text-center ring-1 ring-white rounded-full w-8 h-12 flex items-center justify-center">
+                    <div class="mt-9 text-center ring-1 ring-white rounded-full w-8 h-12 flex items-center justify-center">
                         <div class="w-3 h-3 rounded-full bg-white animate-ping"></div>
                     </div>
                 </div>
-                <p class="mt-8 text-sm font-medium text-white">Double tap to change background Image.</p>
+                <p class="mt-9 text-sm font-medium text-white animate-pulse">Double tap to change background Image.</p>
             </div>
         </div>
     </div>
 </div>
+
 
 <script>
     let heroImages = <?= json_encode($heroImages); ?>;
@@ -87,28 +90,34 @@ $initialImage = !empty($heroImages) ? $heroImages[0] : getAsset('default-hero.jp
             </h1>
 
             <p class="text-justify text-textSecondary">
-                I am Rajesh kumar, owner of the Jeevansathi Studios, Photography based in Muzaffarpur. My team and I have been working since Jan-2009 & have covered more than 3k+ weddings. Jeevansathi Studio in Muzaffarpur is one of the leading businesses in the Photographers. Also known for Wedding Photographers, Photographers, Wedding Video Shooting Services, Video Shooting Services, Pre Wedding Photographers, Photographers For Portfolio, Outdoor Photographers, Model Portfolio and much more. Find Address, Contact Number, Reviews & Ratings, Photos, Maps of Jeevansathi Studio, Muzaffarpur !!!!
+                I am Rajesh Kumar, owner of Suman Studios, a photography business based in Muzaffarpur. My team and I have been working since January 2009 and have captured over 3,000 weddings. Suman Studios in Muzaffarpur is one of the leading names in the photography industry. We specialize in wedding photography, videography, pre-wedding shoots, portfolios, outdoor photography, and much more. Known for exceptional service, we have garnered a strong reputation with numerous positive reviews, ratings, and recommendations. Visit us to discover more about our services and locations.
             </p>
         </div>
 
 
-        <div data-aos="fade-down" class="md:w-7/12 mt-20 md:mt-0 relative">
+        <div data-aos="fade-down" data-aos-delay="200" class="md:w-7/12 mt-20 md:mt-0 relative">
             <div
-                class="w-32 h-32 rounded-full bg-amber-300 absolute -z-10 left-5 -top-10 animate-pulse"></div>
+                class="w-32 h-32 rounded-full bg-secondary absolute -z-10 left-5 -top-10 animate-pulse"
+                style="animation-delay: 0.2s;"></div>
 
             <div
-                class="w-5 h-5 rounded-full absolute bg-secondary -z-10 left-36 -top-12 animate-ping"></div>
+                class="w-5 h-5 rounded-full absolute bg-primary -z-10 left-36 -top-12 animate-ping"
+                style="animation-delay: 0.3s;"></div>
 
             <img
                 class="w-11/12 mx-auto md:ml-auto rounded-md -z-10 brightness-90 floating bg-gray-200"
                 src="<?= getAsset('about-featured.jpg', 'images/'); ?>"
                 loading="lazy"
-                alt="About Image" />
+                alt="About Image"
+                style="animation-delay: 0.4s;" />
 
-            <div class="w-36 h-36 rounded-full bg-primary absolute -z-10 right-3 -bottom-8 animate-pulse"></div>
+            <div class="w-36 h-36 rounded-full bg-primary absolute -z-10 right-3 -bottom-8 animate-pulse"
+                style="animation-delay: 0.5s;"></div>
 
-            <div class="w-5 h-5 rounded-full absolute -z-10 bg-secondary right-36 -bottom-12 animate-ping"></div>
+            <div class="w-5 h-5 rounded-full absolute -z-10 bg-secondary right-36 -bottom-12 animate-ping"
+                style="animation-delay: 0.6s;"></div>
         </div>
+
     </div>
 </div>
 
@@ -138,11 +147,9 @@ $initialImage = !empty($heroImages) ? $heroImages[0] : getAsset('default-hero.jp
 <!-- SERVICES SECTION -->
 <div id="services" class="py-12 mb-12">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="container mx-auto text-center my-6">
+        <div class="container mx-auto text-center mt-6 mb-12">
             <h2 class="text-3xl font-bold leading-snug text-textPrimary lg:text-4xl">Our Services</h2>
-            <p class="max-w-2xl mx-auto py-2 text-lg text-textSecondary">
-                From candid wedding moments to vibrant birthday celebrations and dynamic social events, we ensure that each memory is captured with creativity and professionalism.
-            </p>
+            <img src="<?= getAsset('heading-decoration.png', 'images/') ?>" class="h-12 -mt-1 mx-auto" alt="Heading Decoration">
         </div>
 
         <!-- Swiper Container -->
@@ -270,11 +277,9 @@ $initialImage = !empty($heroImages) ? $heroImages[0] : getAsset('default-hero.jp
 <div id="gallery"></div>
 <div class="container mx-auto px-4 mt-16 mb-24">
     <!-- Header and Description -->
-    <div class="flex flex-col items-center justify-center w-full xss:p-0 mx-auto my-6 text-center xl:px-0">
-        <h2 class="max-w-2xl xss:px-10 md:px-0 text-3xl font-bold leading-snug tracking-tight text-textPrimary lg:leading-tight lg:text-4xl">Gallery</h2>
-        <p class="max-w-2xl py-2 text-lg leading-normal text-textSecondary">
-            Explore our stunning collection of Indian wedding photography. From vibrant ceremonies to intimate moments, each image tells a unique story.
-        </p>
+    <div class="container mx-auto text-center mt-6 mb-12">
+        <h2 class="text-3xl font-bold leading-snug text-textPrimary lg:text-4xl">Gallery</h2>
+        <img src="<?= getAsset('heading-decoration.png', 'images/') ?>" class="h-12 -mt-1 mx-auto" alt="Heading Decoration">
     </div>
 
     <!-- Filter Tabs -->
@@ -347,13 +352,11 @@ $stmtLatest = $conn->prepare($sqlLatest);
 $stmtLatest->execute();
 $resultLatest = $stmtLatest->get_result();
 ?>
-
+<!-- BLOGS SECTION  -->
 <div class="container mx-auto px-4">
-    <div class="flex flex-col items-center justify-center w-full xss:p-0 mx-auto my-6 text-center xl:px-0">
-        <h2 class="max-w-2xl xss:px-10 md:px-0 text-3xl font-bold leading-snug tracking-tight text-textPrimary lg:leading-tight lg:text-4xl">Latest Blogs</h2>
-        <p class="max-w-2xl py-2 text-lg leading-normal text-textSecondary">
-            Stay updated with our latest insights, trends, and industry news. Explore our diverse range of topics to expand your knowledge.
-        </p>
+    <div class="container mx-auto text-center mt-6 mb-12">
+        <h2 class="text-3xl font-bold leading-snug text-textPrimary lg:text-4xl">Our Blogs</h2>
+        <img src="<?= getAsset('heading-decoration.png', 'images/') ?>" class="h-12 -mt-1 mx-auto" alt="Heading Decoration">
     </div>
 
     <div class="blogs-swiper-container overflow-hidden mt-10">
@@ -397,46 +400,40 @@ $stmtLatest->close();
 
 <div class="w-full flex justify-center items-center mt-16 relative">
     <div class="sm:mb-8 sm:flex mx-auto sm:justify-center max-w-[250px]">
-        <div class="relative rounded-full px-5 py-1 text-sm leading-6 text-textSecondary ring-1 ring-text-textPrimary-900/10 hover:ring-textPrimary/20">Check more Blogs <a href="/blogs" class="font-semibold text-primary group">View all <i class="fa fa-arrow-right ml-2 transition-transform duration-300 transform group-hover:translate-x-1"></i></a>
-        </div>
+        <a href="/blogs" class="relative rounded-full px-5 py-1 text-sm leading-6 text-textSecondary border border-1 border-textPrimary/20 hover:border-textPrimary/40 group">Dive In Blogs <span class="font-semibold text-primary">Explore <i class="fa fa-arrow-right ml-2 transition-transform duration-300 transform group-hover:translate-x-1"></i></span>
+        </a>
     </div>
 </div>
 
 
+
+
 <!-- VIDEOGRAPHY SECTION -->
-<div id="ytvideos" class="py-12 mb-12">
+<!-- <div id="ytvideos" class="py-12 mb-12">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="container mx-auto text-center my-6">
+        <div class="container mx-auto text-center mt-6 mb-12">
             <h2 class="text-3xl font-bold leading-snug text-textPrimary lg:text-4xl">Our Videography</h2>
-            <p class="max-w-2xl mx-auto py-2 text-lg text-textSecondary">
-                Experience the magic of our videography services through these highlights. Each video captures the essence of Indian weddings with stunning visuals and heartfelt moments.
-            </p>
+            <img src="<?= getAsset('heading-decoration.png', 'images/') ?>" class="h-12 -mt-1 mx-auto" alt="Heading Decoration">
         </div>
 
-        <!-- Swiper Container -->
         <div class="relative">
             <div class="videography-swiper-container overflow-hidden mx-auto max-w-[90%]">
                 <div class="swiper-wrapper mb-12">
-                    <!-- Slide 1 -->
                     <div class="swiper-slide">
                         <iframe src="https://www.youtube.com/embed/ardtvdR28SQ?si=RkEUcEXLoF5Se1pf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="w-full h-[200px] md:h-[304px] rounded-md z-20" loading="lazy"></iframe>
                     </div>
-                    <!-- Slide 2 -->
                     <div class="swiper-slide">
                         <iframe src="https://www.youtube.com/embed/ardtvdR28SQ?si=RkEUcEXLoF5Se1pf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="w-full h-[200px] md:h-[304px] rounded-md z-20" loading="lazy"></iframe>
                     </div>
-                    <!-- Slide 3 -->
                     <div class="swiper-slide">
                         <iframe src="https://www.youtube.com/embed/ardtvdR28SQ?si=RkEUcEXLoF5Se1pf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="w-full h-[200px] md:h-[304px] rounded-md z-20" loading="lazy"></iframe>
                     </div>
-                    <!-- Slide 4 -->
                     <div class="swiper-slide">
                         <iframe src="https://www.youtube.com/embed/ardtvdR28SQ?si=RkEUcEXLoF5Se1pf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="w-full h-[200px] md:h-[304px] rounded-md z-20" loading="lazy"></iframe>
                     </div>
                 </div>
 
 
-                <!-- Custom Navigation Buttons -->
                 <div class="custom-prev absolute left-0 top-1/2 -mt-10 transform -translate-y-1/2">
                     <button class="w-8 h-8 flex items-center border-2 border-primary justify-center rounded-full hover:bg-primary text-primary transition z-30 duration-300 ease-in-out hover:text-bgPrimary">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
@@ -451,12 +448,11 @@ $stmtLatest->close();
                         </svg>
                     </button>
                 </div>
-                <!-- Pagination -->
                 <div class="custom-pagination text-center"></div>
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 
 <section class="bg-[url('<?= getAsset('cta.jpg', 'images/'); ?>')] bg-cover bg-no-repeat bg-center my-10 py-10">
@@ -464,7 +460,7 @@ $stmtLatest->close();
         <div class="mx-auto max-w-screen-sm text-center">
             <h2 class="mb-4 text-4xl tracking-tight font-extrabold leading-tight text-bgPrimary">Capture Your Special Day</h2>
             <p class="mb-6 font-light text-bgSecondary md:text-lg">Let us create timeless memories of your wedding. Our team is ready to discuss your dream wedding photography. Call/WhatsApp</p>
-            <a href="tel+916200569546" class="text-bgPrimary bg-amber-500 hover:bg-amber-400 focus:ring-2 focus:ring-amber-400 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none"><i class="fa fa-phone-volume"> </i> &nbsp;Call Now</a>
+            <a href="tel+916200569546" class="text-bgPrimary bg-secondary hover:bg-secondary/80 focus:ring-2 focus:ring-amber-400 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none"><i class="fa fa-phone-volume"> </i> &nbsp;Call Now</a>
         </div>
     </div>
 
@@ -562,11 +558,9 @@ $stmtLatest->close();
 
 <!-- PHOTOSHOOT SECTION -->
 <div id="photoshoot" class="container mx-auto px-4 py-8">
-    <div class="mx-auto text-center my-6">
+    <div class="container mx-auto text-center mt-6 mb-12">
         <h2 class="text-3xl font-bold leading-snug text-textPrimary lg:text-4xl">Latest PhotoShoot</h2>
-        <p class="max-w-2xl mx-auto py-2 text-lg text-textSecondary">
-            From candid weddings to lively birthday celebrations, we capture every moment with creativity and professionalism.
-        </p>
+        <img src="<?= getAsset('heading-decoration.png', 'images/') ?>" class="h-12 -mt-1 mx-auto" alt="Heading Decoration">
     </div>
     <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
         <?php
@@ -603,126 +597,138 @@ $stmtLatest->close();
 
 
 <!-- PRICING SECTION  -->
-<div id="pricing"></div>
-<div class="container mx-auto px-4">
-    <div class="flex flex-col items-center justify-center w-full mx-auto mt-10 py-10 text-center">
-        <h2 class="max-w-2xl text-3xl font-bold leading-snug tracking-tight text-textPrimary lg:leading-tight lg:text-4xl">
-            Pricing Plans
-        </h2>
-        <p class="max-w-2xl py-2 text-lg leading-normal text-textSecondary">
-            Discover our flexible pricing plans designed to fit every budget and need. Choose the perfect package to capture your special moments.
-        </p>
+<div id="pricing" class="container mx-auto px-4 py-16">
+    <div class="container mx-auto text-center mt-6 mb-12">
+        <h2 class="text-3xl font-bold leading-snug text-textPrimary lg:text-4xl">Pricing Plans</h2>
+        <img src="<?= getAsset('heading-decoration.png', 'images/') ?>" class="h-12 -mt-1 mx-auto" alt="Heading Decoration">
     </div>
-    <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 -z-10 lg:space-y-0">
+
+    <div class="grid gap-8 lg:grid-cols-3 lg:gap-12">
         <!-- Pricing Card -->
-        <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-textPrimary bg-bgPrimary rounded-lg border border-textSecondary shadow xl:p-8">
+        <div class="flex flex-col p-6 text-center bg-bgPrimary rounded-lg border border-textSecondary shadow-xl relative">
             <h3 class="mb-4 text-2xl font-semibold text-textPrimary">Silver</h3>
             <p class="font-light text-textSecondary sm:text-lg">Best option for personal use & for your next project.</p>
-            <div class="flex justify-center items-baseline my-8">
-                <span class="mr-2 text-5xl font-extrabold text-textPrimary">$29</span>
+            <div class="my-8">
+                <span class="text-4xl font-extrabold text-textPrimary">49,999/-</span>
             </div>
             <!-- List -->
-            <ul role="list" class="mb-8 space-y-4 text-left">
+            <ul class="mb-8 space-y-4 text-left">
                 <li class="flex items-center space-x-3">
-                    <i class="fa fa-check text-green-500 flex-shrink w-5 h-5"></i>
-                    <span class="text-text-Primary">Individual configuration</span>
+                    <i class="fa fa-check text-yellow-500"></i>
+                    <span class="text-textPrimary">Photo Album: <span class="font-semibold">250 - 300</span></span>
+                </li>
+
+                <li class="flex items-center space-x-3">
+                    <i class="fa fa-check text-yellow-500"></i>
+                    <span class="text-textPrimary">Video highlight + Long Video.</span>
                 </li>
                 <li class="flex items-center space-x-3">
-                    <i class="fa fa-check text-green-500 flex-shrink w-5 h-5"></i>
-                    <span class="text-text-Primary">No setup, or hidden fees</span>
+                    <i class="fa fa-check text-yellow-500"></i>
+                    <span class="text-textPrimary">Two Day Wedding Cinematography.</span>
                 </li>
                 <li class="flex items-center space-x-3">
-                    <i class="fa fa-check text-green-500 flex-shrink w-5 h-5"></i>
-                    <span class="text-text-Primary">Team size: <span class="font-semibold">1 developer</span></span>
+                    <i class="fa fa-check text-green-500"></i>
+                    <span class="text-textPrimary">Two Day Wedding Photography.</span>
                 </li>
                 <li class="flex items-center space-x-3">
-                    <i class="fa fa-check text-green-500 flex-shrink w-5 h-5"></i>
-                    <span class="text-text-Primary">Premium support: <span class="font-semibold">6 months</span></span>
-                </li>
-                <li class="flex items-center space-x-3">
-                    <i class="fa fa-check text-green-500 flex-shrink w-5 h-5"></i>
-                    <span class="text-text-Primary">Free updates: <span class="font-semibold">6 months</span></span>
+                    <i class="fa fa-check text-green-500"></i>
+                    <span class="text-textPrimary">All Soft Copy Video On PenDrive.</span>
                 </li>
             </ul>
-            <a href="/get-a-quote" class="text-bgPrimary bg-primary focus:ring-2 focus:ring-primary ring-offset-2 font-medium rounded-full text-sm px-5 py-2.5 text-center w-[120px] mx-auto">Get started</a>
+            <a href="/get-a-quote" class="text-bgPrimary bg-primary focus:ring-2 focus:ring-primary ring-offset-2 font-medium rounded-full text-sm px-5 py-2.5 text-center w-[120px] absolute bottom-6 left-1/2 transform -translate-x-1/2">
+                Get started
+            </a>
         </div>
+
         <!-- Pricing Card -->
-        <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-textPrimary bg-bgPrimary rounded-lg border border-textSecondary shadow xl:p-8">
+        <div class="flex flex-col p-6 text-center bg-bgPrimary rounded-lg border border-textSecondary shadow-xl relative">
             <h3 class="mb-4 text-2xl font-semibold text-textPrimary">Gold</h3>
-            <p class="font-light text-textSecondary sm:text-lg">Relevant for multiple users, extended & premium support.</p>
-            <div class="flex justify-center items-baseline my-8">
-                <span class="mr-2 text-5xl font-extrabold text-textPrimary">$99</span>
+            <p class="font-light text-textSecondary sm:text-lg">Ideal for those seeking a more comprehensive package.</p>
+            <div class="my-8">
+                <span class="text-4xl font-extrabold text-textPrimary">99,999/-</span>
             </div>
             <!-- List -->
-            <ul role="list" class="mb-8 space-y-4 text-left">
+            <ul class="mb-24 space-y-4 text-left">
                 <li class="flex items-center space-x-3">
-                    <i class="fa fa-check text-green-500 flex-shrink w-5 h-5"></i>
-                    <span class="text-text-Primary">Individual configuration</span>
+                    <i class="fa fa-check text-yellow-500"></i>
+                    <span class="text-textPrimary">Two Day Wedding Photography.</span>
                 </li>
                 <li class="flex items-center space-x-3">
-                    <i class="fa fa-check text-green-500 flex-shrink w-5 h-5"></i>
-                    <span class="text-text-Primary">No setup, or hidden fees</span>
+                    <i class="fa fa-check text-green-500"></i>
+                    <span class="text-textPrimary">Video highlight + Teaser + Long Video.</span>
                 </li>
                 <li class="flex items-center space-x-3">
-                    <i class="fa fa-check text-green-500 flex-shrink w-5 h-5"></i>
-                    <span class="text-text-Primary">Team size: <span class="font-semibold">10 developers</span></span>
+                    <i class="fa fa-check text-green-500"></i>
+                    <span class="text-textPrimary">Photo Album: <span class="font-semibold">300 - 350</span></span>
                 </li>
                 <li class="flex items-center space-x-3">
-                    <i class="fa fa-check text-green-500 flex-shrink w-5 h-5"></i>
-                    <span class="text-text-Primary">Premium support: <span class="font-semibold">24 months</span></span>
+                    <i class="fa fa-check text-green-500"></i>
+                    <span class="text-textPrimary">Photo + Candid.</span>
                 </li>
                 <li class="flex items-center space-x-3">
-                    <i class="fa fa-check text-green-500 flex-shrink w-5 h-5"></i>
-                    <span class="text-text-Primary">Free updates: <span class="font-semibold">24 months</span></span>
+                    <i class="fa fa-check text-green-500"></i>
+                    <span class="text-textPrimary">Video + Cinematography.</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                    <i class="fa fa-check text-green-500"></i>
+                    <span class="text-textPrimary">All Soft Copy Video On PenDrive.</span>
                 </li>
             </ul>
-            <a href="/get-a-quote" class="text-bgPrimary bg-primary focus:ring-2 focus:ring-primary ring-offset-2 font-medium rounded-full text-sm px-5 py-2.5 text-center w-[120px] mx-auto">Get started</a>
+            <a href="/get-a-quote" class="text-bgPrimary bg-primary focus:ring-2 focus:ring-primary ring-offset-2 font-medium rounded-full text-sm px-5 py-2.5 text-center w-[120px] absolute bottom-6 left-1/2 transform -translate-x-1/2">
+                Get started
+            </a>
         </div>
+
         <!-- Pricing Card -->
-        <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-textPrimary bg-bgPrimary rounded-lg border border-textSecondary shadow xl:p-8">
+        <div class="flex flex-col p-6 text-center bg-bgPrimary rounded-lg border border-textSecondary shadow-xl relative">
             <h3 class="mb-4 text-2xl font-semibold text-textPrimary">Deluxe</h3>
-            <p class="font-light text-textSecondary sm:text-lg">Best for large scale uses and extended redistribution rights.</p>
-            <div class="flex justify-center items-baseline my-8">
-                <span class="mr-2 text-5xl font-extrabold text-textPrimary">$499</span>
+            <p class="font-light text-textSecondary sm:text-lg">Perfect for those looking for a premium experience.</p>
+            <div class="my-8">
+                <span class="text-4xl font-extrabold text-textPrimary">149,999/-</span>
             </div>
             <!-- List -->
-            <ul role="list" class="mb-8 space-y-4 text-left">
+            <ul class="mb-8 space-y-4 text-left">
                 <li class="flex items-center space-x-3">
-                    <i class="fa fa-check text-green-500 flex-shrink w-5 h-5"></i>
-                    <span class="text-text-Primary">Individual configuration</span>
+                    <i class="fa fa-check text-green-500"></i>
+                    <span class="text-textPrimary">Pre-Wedding + Two Day Wedding Photography.</span>
                 </li>
                 <li class="flex items-center space-x-3">
-                    <i class="fa fa-check text-green-500 flex-shrink w-5 h-5"></i>
-                    <span class="text-text-Primary">No setup, or hidden fees</span>
+                    <i class="fa fa-check text-green-500"></i>
+                    <span class="text-textPrimary">Pre-Wedding + Photo + Video.</span>
                 </li>
                 <li class="flex items-center space-x-3">
-                    <i class="fa fa-check text-green-500 flex-shrink w-5 h-5"></i>
-                    <span class="text-text-Primary">Team size: <span class="font-semibold">100+ developers</span></span>
+                    <i class="fa fa-check text-green-500"></i>
+                    <span class="text-textPrimary">Video highlight + Teaser + Reel + Long Video.</span>
                 </li>
                 <li class="flex items-center space-x-3">
-                    <i class="fa fa-check text-green-500 flex-shrink w-5 h-5"></i>
-                    <span class="text-text-Primary">Premium support: <span class="font-semibold">36 months</span></span>
+                    <i class="fa fa-check text-green-500"></i>
+                    <span class="text-textPrimary">Photo Album: <span class="font-semibold">300 - 350</span></span>
                 </li>
                 <li class="flex items-center space-x-3">
-                    <i class="fa fa-check text-green-500 flex-shrink w-5 h-5"></i>
-                    <span class="text-text-Primary">Free updates: <span class="font-semibold">36 months</span></span>
+                    <i class="fa fa-check text-green-500"></i>
+                    <span class="text-textPrimary">Wedding Day Photo + Candid.</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                    <i class="fa fa-check text-green-500"></i>
+                    <span class="text-textPrimary">Video + Cinematography.</span>
                 </li>
             </ul>
-            <a href="/get-a-quote" class="text-bgPrimary bg-primary focus:ring-2 focus:ring-primary ring-offset-2 font-medium rounded-full text-sm px-5 py-2.5 text-center w-[120px] mx-auto">Get started</a>
+            <a href="/get-a-quote" class="text-bgPrimary bg-primary focus:ring-2 focus:ring-primary ring-offset-2 font-medium rounded-full text-sm px-5 py-2.5 text-center w-[120px] absolute bottom-6 left-1/2 transform -translate-x-1/2">
+                Get started
+            </a>
         </div>
     </div>
 </div>
 
 
 
+
 <!-- CONTACT SECTION  -->
 <div class="my-20" id="contact"></div>
 <div class="container mx-auto px-4">
-    <div class="flex flex-col items-center justify-center w-full xss:p-0 mx-auto mt-10 py-10 text-center xl:px-0">
-        <h2 class="max-w-2xl xss:px-10 md:px-0 text-3xl font-bold leading-snug tracking-tight text-textPrimary lg:leading-tight lg:text-4xl">Contact Us</h2>
-        <p class="max-w-2xl py-2 text-lg leading-normal text-textSecondary">
-            Have questions or need assistance? Get in touch with us and let’s make your wedding memories unforgettable. We’re here to help!
-        </p>
+    <div class="container mx-auto text-center mt-6 mb-12">
+        <h2 class="text-3xl font-bold leading-snug text-textPrimary lg:text-4xl">Contact Us</h2>
+        <img src="<?= getAsset('heading-decoration.png', 'images/') ?>" class="h-12 -mt-1 mx-auto" alt="Heading Decoration">
     </div>
     <div class="md:flex mt-6 mb-10 md:space-x-10 items-start z-1">
         <div class="md:w-6/12 md:mt-0">

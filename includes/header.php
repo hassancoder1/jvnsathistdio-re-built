@@ -1,4 +1,4 @@
-<link rel="shortcut icon" href="<?= getAsset('logo.svg', 'images/svgs/'); ?>" type="image/x-icon">
+<link rel="shortcut icon" href="<?= getAsset('logo.png', 'images/'); ?>" type="image/x-icon">
 <link href="<?= getAsset('amaranth-font.css', 'css/'); ?>" rel="stylesheet">
 <script src="<?= getAsset('fontawesome.js', 'js/'); ?>" crossorigin="anonymous"></script>
 <script src="<?= getAsset('tailwind.js', 'js/'); ?>"></script>

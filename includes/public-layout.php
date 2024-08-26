@@ -142,11 +142,11 @@ if (empty($pageKey)) {
                 <div class="w-full lg:w-6/12 xss:px-3 md:px-4 -mt-[1.82rem]">
                     <a href="https://theeaglestech.com/" class="flex gap-2 md:mt-8" aria-label="Footer Logo">
                         <span class="text-2xl mt-4 mx-4 font-semibold capitalize text-bgPrimary">
-                            LOGO </span>
+                            SUMAN STUDIOS </span>
                     </a>
 
                     <p class="text-md m-4 text-bgSecondary text-justify">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim facere, esse repellat nihil ipsa ad nesciunt rem, quibusdam alias placeat asperiores. Accusantium recusandae voluptates, voluptatum maxime illum provident sed est eius molestiae veniam.
+                        We capture your most precious moments with passion and precision. From weddings to portfolios, our team is dedicated to delivering high-quality photography that tells your unique story. Trust us to make your memories last a lifetime.
                     </p>
                     <div class="my-6 mx-4 lg:mb-0 ">
 
@@ -222,6 +222,7 @@ if (empty($pageKey)) {
                 fetch(rootURL + "/" + apiSlug + "/updateviewscount");
             }, 30000);
         });
+        const isHome = <?= $pageKey === '' ? true : false ?>;
     </script>
 </body>
 

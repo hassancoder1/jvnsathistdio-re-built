@@ -15,10 +15,14 @@ $(document).ready(() => {
     $(window).on('scroll', function () {
         if ($(this).scrollTop() > 0) {
             $('.navbar').addClass('backdrop-blur-md border-b bg-bgPrimary/30');
-            $('.navbar .hero-text').addClass('text-textPrimary').removeClass('text-white');
+            if (isHome) {
+                $('.navbar .hero-text').addClass('text-textPrimary').removeClass('text-white');
+            }
         } else {
             $('.navbar').removeClass('backdrop-blur-md border-b bg-bgPrimary/30');
-            $('.navbar .hero-text').addClass('text-white').removeClass('text-textPrimary');
+            if (isHome) {
+                $('.navbar .hero-text').addClass('text-white').removeClass('text-textPrimary');
+            }
         }
 
         // Stats counter on scroll - Check if the #stats section exists

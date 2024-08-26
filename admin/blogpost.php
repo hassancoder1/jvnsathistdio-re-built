@@ -105,7 +105,18 @@ if (!isset($_GET['id'])) {
     }
 
     function updateRichTextContent() {
-        const editorContent = document.getElementById('posteditor').innerHTML;
+        const editor = document.querySelector('.ql-editor');
+
+        // Remove the contenteditable and spellcheck attributes
+        if (editor) {
+            editor.removeAttribute('contenteditable');
+            editor.removeAttribute('spellcheck');
+        }
+
+        // Capture the content without the attributes
+        const editorContent = editor.innerHTML;
+
+        // Store the cleaned content in the hidden input field
         document.getElementById('contentField').value = editorContent;
     }
 </script>

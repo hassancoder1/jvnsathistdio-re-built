@@ -78,8 +78,8 @@ $encrypted_json_colortheme = encryptData(json_encode([
     'bgSecondary' => "#e5e7eb",
     'textPrimary' => "#0f172a",
     'textSecondary' => "#6B728F",
-    'primary' => "#7c3aed",
-    'secondary' => "#e11d48",
+    'primary' => "#ff5c61",
+    'secondary' => "#ffb300"
 ]));
 
 $encrypted_json_login = encryptData(json_encode([

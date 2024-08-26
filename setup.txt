@@ -75,11 +75,11 @@ foreach ($table_queries as $query) {
 // Prepare encrypted data for default admin records
 $encrypted_json_colortheme = encryptData(json_encode([
     'bgPrimary' => "#ffffff",
-    'bgSecondary' => "#e5e7eb",
-    'textPrimary' => "#0f172a",
-    'textSecondary' => "#6B728F",
-    'primary' => "#7c3aed",
-    'secondary' => "#e11d48",
+            'bgSecondary' => "#e5e7eb",
+            'textPrimary' => "#0f172a",
+            'textSecondary' => "#6B728F",
+            'primary' => "#ff5c61",
+            'secondary' => "#ffb300"
 ]));
 
 $encrypted_json_login = encryptData(json_encode([

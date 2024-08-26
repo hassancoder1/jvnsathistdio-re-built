@@ -42,8 +42,8 @@ function set_color_scheme()
             'bgSecondary' => "#e5e7eb",
             'textPrimary' => "#0f172a",
             'textSecondary' => "#6B728F",
-            'primary' => "#7c3aed",
-            'secondary' => "#e11d48",
+            'primary' => "#ff5c61",
+            'secondary' => "#ffb300"
         ];
     }
     return $colorScheme;
@@ -82,4 +82,19 @@ function returnJSON($type, $msg, $redirect = '')
         $json_array["redirect"] = $redirect;
     endif;
     echo json_encode($json_array);
+}
+
+function compress_output($buffer)
+{
+    // Remove unnecessary whitespace and newlines
+    $buffer = preg_replace('/\s+/', ' ', $buffer);
+
+    // Compress the content using Gzip
+    $compressedContent = gzencode($buffer, 9); // 9 is the highest level of compression
+
+    // Add Gzip headers
+    header('Content-Encoding: gzip');
+    header('Content-Length: ' . strlen($compressedContent));
+
+    return $compressedContent;
 }
