@@ -70,9 +70,9 @@
                         <select type="text" id="plan" name="plan" placeholder="e.g. 10000 INR"
                             class="flex h-10 w-full rounded-md border border-textPrimary/60 bg-bgPrimary px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 text-textPrimary" required>
                             <option value="" disabled selected>Choose an option</option>
-                            <option value="Silver">Silver (5k INR)</option>
-                            <option value="Gold">Gold (8k INR)</option>
-                            <option value="Deluxe">Deluxe (10k INR)</option>
+                            <option value="Silver (49,999/- INR)">Silver (49,999/- INR)</option>
+                            <option value="Gold (99,999/- INR)">Gold (99,999/- INR)</option>
+                            <option value="Deluxe (149,999/- INR)">Deluxe (149,999/- INR)</option>
                             <option value="Custom">Custom</option>
                         </select>
                     </div>
@@ -80,7 +80,7 @@
                 <div class="grid sm:grid-cols-2 gap-4 hidden">
                     <div class="space-y-2">
                         <label for="budget" class="text-sm font-semibold leading-none text-textPrimary">Budget</label>
-                        <input type="text" id="budget" name="budget" placeholder="e.g. 10000 INR"
+                        <input type="text" id="budget" name="budget" placeholder="e.g. 75.000/- INR"
                             class="flex h-10 w-full rounded-md border border-textPrimary/60 bg-bgPrimary px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 text-textPrimary" />
                     </div>
                 </div>
@@ -104,7 +104,7 @@
                     </svg>
                     <span class="getquote-form-btn-text font-bold text-bgPrimary">Get a quote</span>
                 </button>
-                <p class="getquote-form-response-text font-semibold text-sm text-textPrimary"></p>
+                <p class="getquote-form-response-text font-semibold text-sm"></p>
             </form>
         </div>
     </div>

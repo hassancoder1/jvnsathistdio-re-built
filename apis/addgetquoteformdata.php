@@ -9,7 +9,7 @@ if ($service === 'Other') {
 }
 
 if ($plan === 'Custom') {
-    $plan = isset($_POST['budget']) ? htmlspecialchars($_POST['budget'], ENT_QUOTES, 'UTF-8') . "INR" : $plan;
+    $plan = isset($_POST['budget']) ? htmlspecialchars($_POST['budget'], ENT_QUOTES, 'UTF-8') : $plan;
 }
 
 $event_start_time = $_POST['eventstarttime'];

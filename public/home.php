@@ -26,7 +26,7 @@ $heroImages = array_map(function ($image) {
 }, $imagesByLocation['hero']);
 
 // Set the initial background image
-$initialImage = !empty($heroImages) ? $heroImages[0] : getAsset('default-hero.jpg', 'images/');
+$initialImage = !empty($heroImages) ? $heroImages[0] : getAsset('default-hero.webp', 'images/');
 ?>
 
 <!-- Preload hero images -->
@@ -38,26 +38,26 @@ $initialImage = !empty($heroImages) ? $heroImages[0] : getAsset('default-hero.jp
 </head>
 
 <!-- HERO SECTION -->
-<div id="hero-section" class="relative isolate bg-cover bg-no-repeat cursor-pointer overflow-hidden" style="background-image: url('<?= $initialImage ?>');" ondblclick="changeBackgroundImage()">
+<div id="hero-section" class="relative hero-image isolate bg-cover bg-no-repeat cursor-pointer overflow-hidden" style="background-image: url('<?= $initialImage ?>');" ondblclick="changeBackgroundImage()">
     <div class="w-full h-full bg-slate-950/30 px-6 lg:px-8">
         <div class="mx-auto max-w-2xl py-16 sm:py-20 lg:py-12">
             <div class="text-center">
-                <div class="w-28 h-28 my-4 bg-white border border-[6px] border-secondary rounded-full flex items-center justify-center mx-auto">
-                    <img src="<?= getAsset('logo.png', 'images/'); ?>" alt="Logo" class="w-full h-full rounded-full object-contain">
+                <div class="w-28 h-28 mb-4 mt-16 bg-white border border-[6px] border-secondary rounded-full flex items-center justify-center mx-auto">
+                    <img src="<?= getAsset('logo.webp', 'images/'); ?>" alt="Logo" class="w-full h-full rounded-full object-contain">
                 </div>
                 <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">Capture the Essence of Your
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-secondary to-primary font-bold">Indian Wedding</span>
                 </h1>
                 <p class="mt-4 text-lg leading-5 text-white/90">Experience the magic of your special day through the lens of our talented Indian wedding photographers.</p>
-                <div class="mt-9 flex items-center justify-center gap-x-6">
+                <div class="mt-5 flex items-center justify-center gap-x-6">
                     <a href="/#about" class="rounded-full bg-primary px-4 py-2.5 text-sm font-semibold text-bgPrimary shadow-sm hover:bg-primary/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary transition group">Learn more <i class="fa fa-arrow-down ml-2 transition-transform duration-300 transform group-hover:translate-y-1"></i></a>
                 </div>
                 <div class="flex items-center justify-center">
-                    <div class="mt-9 text-center ring-1 ring-white rounded-full w-8 h-12 flex items-center justify-center">
+                    <div class="mt-6 text-center ring-1 ring-white rounded-full w-8 h-12 flex items-center justify-center">
                         <div class="w-3 h-3 rounded-full bg-white animate-ping"></div>
                     </div>
                 </div>
-                <p class="mt-9 text-sm font-medium text-white animate-pulse">Double tap to change background Image.</p>
+                <p class="mt-5 text-sm font-medium text-white animate-pulse">Double tap to change background Image.</p>
             </div>
         </div>
     </div>
@@ -106,7 +106,7 @@ $initialImage = !empty($heroImages) ? $heroImages[0] : getAsset('default-hero.jp
 
             <img
                 class="w-11/12 mx-auto md:ml-auto rounded-md -z-10 brightness-90 floating bg-gray-200"
-                src="<?= getAsset('about-featured.jpg', 'images/'); ?>"
+                src="<?= getAsset('about-featured.webp', 'images/'); ?>"
                 loading="lazy"
                 alt="About Image"
                 style="animation-delay: 0.4s;" />
@@ -123,20 +123,20 @@ $initialImage = !empty($heroImages) ? $heroImages[0] : getAsset('default-hero.jp
 
 <!-- STATS SECTION  -->
 <div id="stats"></div>
-<div class="container mx-auto">
-    <div class="py-24 sm:py-10 mt-10">
+<div class="border-y-0 md:border-y-8 md:border-x-0 border-x-8 border-primary border-double my-10">
+    <div class="py-24 sm:py-10 mx-auto bg-secondary">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
                 <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-                    <dt class="text-base leading-7 text-textSecondary">Weddings Covered</dt>
+                    <dt class="text-base leading-7 text-textPrimary">Weddings Covered</dt>
                     <dd class="order-first text-3xl font-semibold tracking-tight text-textPrimary sm:text-5xl count" data-count="3000">0+</dd>
                 </div>
                 <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-                    <dt class="text-base leading-7 text-textSecondary">Photos Delivered</dt>
+                    <dt class="text-base leading-7 text-textPrimary">Photos Delivered</dt>
                     <dd class="order-first text-3xl font-semibold tracking-tight text-textPrimary sm:text-5xl count" data-count="1200000">0</dd>
                 </div>
                 <div class="mx-auto flex max-w-xs flex-col gap-y-4">
-                    <dt class="text-base leading-7 text-textSecondary">Happy Clients</dt>
+                    <dt class="text-base leading-7 text-textPrimary">Happy Clients</dt>
                     <dd class="order-first text-3xl font-semibold tracking-tight text-textPrimary sm:text-5xl count" data-count="2500">0+</dd>
                 </div>
             </dl>
@@ -149,7 +149,7 @@ $initialImage = !empty($heroImages) ? $heroImages[0] : getAsset('default-hero.jp
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="container mx-auto text-center mt-6 mb-12">
             <h2 class="text-3xl font-bold leading-snug text-textPrimary lg:text-4xl">Our Services</h2>
-            <img src="<?= getAsset('heading-decoration.png', 'images/') ?>" class="h-12 -mt-1 mx-auto" alt="Heading Decoration">
+            <img src="<?= getAsset('heading-decoration.webp', 'images/') ?>" class="h-12 -mt-1 mx-auto" alt="Heading Decoration">
         </div>
 
         <!-- Swiper Container -->
@@ -159,8 +159,8 @@ $initialImage = !empty($heroImages) ? $heroImages[0] : getAsset('default-hero.jp
                     <!-- Slide 1 -->
                     <div class="swiper-slide">
                         <div class="relative w-[80%] mx-auto md:w-auto flex flex-col justify-center items-center text-center gap-3">
-                            <div class="flex flex-col h-12 w-12 items-center justify-center rounded-lg bg-primary">
-                                <img src="<?= getAsset('wedding-photoshoot-service.svg', 'images/svgs/'); ?>" alt="Wedding PhotoShoot" loading="lazy" />
+                            <div class="flex flex-col items-center justify-center">
+                                <img class="h-28 w-28 rounded-full border-4 border-primary" src="<?= getAsset('wedding-photoshoot-service.webp', 'images/'); ?>" alt="Wedding PhotoShoot" loading="lazy" />
                             </div>
                             <div>
                                 <span class="text-base font-semibold leading-7 text-textPrimary">
@@ -174,8 +174,8 @@ $initialImage = !empty($heroImages) ? $heroImages[0] : getAsset('default-hero.jp
                     <!-- Slide 2 -->
                     <div class="swiper-slide">
                         <div class="relative w-[80%] mx-auto md:w-auto flex flex-col justify-center items-center text-center gap-3">
-                            <div class="flex flex-col h-12 w-12 items-center justify-center rounded-lg bg-primary">
-                                <img src="<?= getAsset('pre-wedding-photoshoot-service.svg', 'images/svgs/'); ?>" alt="Pre Wedding Shoots" loading="lazy" />
+                            <div class="flex flex-col items-center justify-center">
+                                <img class="h-28 w-28 rounded-full border-4 border-primary" src="<?= getAsset('pre-wedding-photoshoot-service.webp', 'images/'); ?>" alt="Pre Wedding Shoots" loading="lazy" />
                             </div>
                             <div>
                                 <span class="text-base font-semibold leading-7 text-textPrimary">
@@ -189,8 +189,8 @@ $initialImage = !empty($heroImages) ? $heroImages[0] : getAsset('default-hero.jp
 
                     <div class="swiper-slide">
                         <div class="relative w-[80%] mx-auto md:w-auto flex flex-col justify-center items-center text-center gap-3">
-                            <div class="flex flex-col h-12 w-12 items-center justify-center rounded-lg bg-primary">
-                                <img src="<?= getAsset('photographers-for-functions-service.svg', 'images/svgs/'); ?>" alt="PhotoGraphers For Function" loading="lazy" />
+                            <div class="flex flex-col items-center justify-center">
+                                <img class="h-28 w-28 rounded-full border-4 border-primary" src="<?= getAsset('photographers-for-functions-service.webp', 'images/'); ?>" alt="PhotoGraphers For Function" loading="lazy" />
                             </div>
                             <div>
                                 <span class="text-base font-semibold leading-7 text-textPrimary">
@@ -204,8 +204,8 @@ $initialImage = !empty($heroImages) ? $heroImages[0] : getAsset('default-hero.jp
 
                     <div class="swiper-slide">
                         <div class="relative w-[80%] mx-auto md:w-auto flex flex-col justify-center items-center text-center gap-3">
-                            <div class="flex flex-col h-12 w-12 items-center justify-center rounded-lg bg-primary">
-                                <img src="<?= getAsset('cadid-wedding-photographers-service.svg', 'images/svgs/'); ?>" alt="Candid Wedding PhotoGraphers" loading="lazy" />
+                            <div class="flex flex-col items-center justify-center">
+                                <img class="h-28 w-28 rounded-full border-4 border-primary" src="<?= getAsset('cadid-wedding-photographers-service.webp', 'images/'); ?>" alt="Candid Wedding PhotoGraphers" loading="lazy" />
                             </div>
                             <div>
                                 <span class="text-base font-semibold leading-7 text-textPrimary">
@@ -219,8 +219,8 @@ $initialImage = !empty($heroImages) ? $heroImages[0] : getAsset('default-hero.jp
 
                     <div class="swiper-slide">
                         <div class="relative w-[80%] mx-auto md:w-auto flex flex-col justify-center items-center text-center gap-3">
-                            <div class="flex flex-col h-12 w-12 items-center justify-center rounded-lg bg-primary">
-                                <img src="<?= getAsset('birthday-shoot-service.svg', 'images/svgs/'); ?>" alt="BirthDay PhotoShoot" loading="lazy" />
+                            <div class="flex flex-col items-center justify-center">
+                                <img class="h-28 w-28 rounded-full border-4 border-primary" src="<?= getAsset('birthday-shoot-service.webp', 'images/'); ?>" alt="BirthDay PhotoShoot" loading="lazy" />
                             </div>
                             <div>
                                 <span class="text-base font-semibold leading-7 text-textPrimary">
@@ -234,8 +234,8 @@ $initialImage = !empty($heroImages) ? $heroImages[0] : getAsset('default-hero.jp
 
                     <div class="swiper-slide">
                         <div class="relative w-[80%] mx-auto md:w-auto flex flex-col justify-center items-center text-center gap-3">
-                            <div class="flex flex-col h-12 w-12 items-center justify-center rounded-lg bg-primary">
-                                <img src="<?= getAsset('social-photography-service.svg', 'images/svgs/'); ?>" alt="Social PhotoGraphy" loading="lazy" />
+                            <div class="flex flex-col items-center justify-center">
+                                <img class="h-28 w-28 rounded-full border-4 border-primary" src="<?= getAsset('social-photography-service.webp', 'images/'); ?>" alt="Social PhotoGraphy" loading="lazy" />
                             </div>
                             <div>
                                 <span class="text-base font-semibold leading-7 text-textPrimary">
@@ -279,7 +279,7 @@ $initialImage = !empty($heroImages) ? $heroImages[0] : getAsset('default-hero.jp
     <!-- Header and Description -->
     <div class="container mx-auto text-center mt-6 mb-12">
         <h2 class="text-3xl font-bold leading-snug text-textPrimary lg:text-4xl">Gallery</h2>
-        <img src="<?= getAsset('heading-decoration.png', 'images/') ?>" class="h-12 -mt-1 mx-auto" alt="Heading Decoration">
+        <img src="<?= getAsset('heading-decoration.webp', 'images/') ?>" class="h-12 -mt-1 mx-auto" alt="Heading Decoration">
     </div>
 
     <!-- Filter Tabs -->
@@ -335,7 +335,7 @@ $initialImage = !empty($heroImages) ? $heroImages[0] : getAsset('default-hero.jp
 
         <div class="grid gap-2">
             <div>
-                <img class="main-image min-h-[300px] max-h-[380px] bg-gray-200 max-w-full mx-auto rounded-lg" src="" alt="Open Modal Image" loading="lazy">
+                <img class="main-image min-h-[300px] max-h-[380px] ring-primary ring-2 ring-offset-2 max-w-full mx-auto rounded-lg" src="" alt="Open Modal Image" loading="lazy">
             </div>
             <div class="flex justify-start items-center gap-4 overflow-x-auto w-full px-2 md:px-8 py-3 thumbnails">
                 <!-- Thumbnails will be populated dynamically -->
@@ -356,15 +356,15 @@ $resultLatest = $stmtLatest->get_result();
 <div class="container mx-auto px-4">
     <div class="container mx-auto text-center mt-6 mb-12">
         <h2 class="text-3xl font-bold leading-snug text-textPrimary lg:text-4xl">Our Blogs</h2>
-        <img src="<?= getAsset('heading-decoration.png', 'images/') ?>" class="h-12 -mt-1 mx-auto" alt="Heading Decoration">
+        <img src="<?= getAsset('heading-decoration.webp', 'images/') ?>" class="h-12 -mt-1 mx-auto" alt="Heading Decoration">
     </div>
 
     <div class="blogs-swiper-container overflow-hidden mt-10">
         <div class="swiper-wrapper flex gap-6">
             <?php if ($resultLatest->num_rows > 0): ?>
                 <?php while ($row = $resultLatest->fetch_assoc()): ?>
-                    <div onclick="redirect('/blog/<?= $row['slug']; ?>')" class="swiper-slide relative w-full sm:w-[calc(50%-12px)] cursor-pointer rounded-md overflow-hidden">
-                        <img src="<?= getAsset($row['image'], 'images/' . UPLOADS); ?>" alt="<?= htmlspecialchars($row['title'], ENT_QUOTES, 'UTF-8'); ?>" class="w-full h-full sm:h-auto object-cover z-20" loading="lazy">
+                    <div onclick="redirect('/blog/<?= $row['slug']; ?>')" class="swiper-slide relative w-full sm:w-[calc(50%-12px)] cursor-pointer rounded-md overflow-hidden h-[400px]"> <!-- Fixed height -->
+                        <img src="<?= getAsset($row['image'], 'images/' . UPLOADS); ?>" alt="<?= htmlspecialchars($row['title'], ENT_QUOTES, 'UTF-8'); ?>" class="w-full h-full object-cover z-20" loading="lazy"> <!-- Fixed height for image -->
                         <div class="absolute top-0 left-0 p-4 flex flex-col justify-end w-full h-full z-30 bg-textPrimary/50">
                             <h3 class="text-2xl font-bold text-bgPrimary"><?= htmlspecialchars($row['title'], ENT_QUOTES, 'UTF-8'); ?></h3>
                             <p class="text-md text-bgPrimary font-medium"><?= date('F j, Y', strtotime($row['date'])); ?></p>
@@ -398,6 +398,7 @@ $stmtLatest->close();
 ?>
 
 
+
 <div class="w-full flex justify-center items-center mt-16 relative">
     <div class="sm:mb-8 sm:flex mx-auto sm:justify-center max-w-[250px]">
         <a href="/blogs" class="relative rounded-full px-5 py-1 text-sm leading-6 text-textSecondary border border-1 border-textPrimary/20 hover:border-textPrimary/40 group">Dive In Blogs <span class="font-semibold text-primary">Explore <i class="fa fa-arrow-right ml-2 transition-transform duration-300 transform group-hover:translate-x-1"></i></span>
@@ -409,30 +410,121 @@ $stmtLatest->close();
 
 
 <!-- VIDEOGRAPHY SECTION -->
-<!-- <div id="ytvideos" class="py-12 mb-12">
+<div id="ytvideos" class="py-12 mb-12">
+    <!-- 
+                ### INTRUCTIONS TO CHANGE VIDEO LINK ###
+                1. COPY THE VIDEO LINK FROM YOUTUBE THE CHECK THE LINK
+                
+                2. PASTE THE WHOLE LINK IN THE A HREF TO REDIRECT THE URL TO YOUR YOUTUBE VIDEO
+                3. FOR SHOWING LIVE VIDEO THUMBNAIL, IF CHECK THIS EXAMPLE LINK ( https://www.youtube.com/watch?v=ardtvdR28SQ )IN THIS URL THE PART (v=ardtvdR28SQ) THAT "ardtvdR28SQ" IS THE VIDEO ID NOW IN THE IMG TAG PASTE THE VIDEO IS AFTER PART "vi/"
+                https://img.youtube.com/vi/YOUR-VIDEO-ID/maxresdefault.jpg
+    -->
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
         <div class="container mx-auto text-center mt-6 mb-12">
             <h2 class="text-3xl font-bold leading-snug text-textPrimary lg:text-4xl">Our Videography</h2>
-            <img src="<?= getAsset('heading-decoration.png', 'images/') ?>" class="h-12 -mt-1 mx-auto" alt="Heading Decoration">
+            <img src="<?= getAsset('heading-decoration.webp', 'images/') ?>" class="h-12 -mt-1 mx-auto" alt="Heading Decoration">
         </div>
 
         <div class="relative">
-            <div class="videography-swiper-container overflow-hidden mx-auto max-w-[90%]">
+            <div class="videography-swiper-container overflow-hidden mx-auto max-w-[80%]">
                 <div class="swiper-wrapper mb-12">
-                    <div class="swiper-slide">
-                        <iframe src="https://www.youtube.com/embed/ardtvdR28SQ?si=RkEUcEXLoF5Se1pf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="w-full h-[200px] md:h-[304px] rounded-md z-20" loading="lazy"></iframe>
-                    </div>
-                    <div class="swiper-slide">
-                        <iframe src="https://www.youtube.com/embed/ardtvdR28SQ?si=RkEUcEXLoF5Se1pf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="w-full h-[200px] md:h-[304px] rounded-md z-20" loading="lazy"></iframe>
-                    </div>
-                    <div class="swiper-slide">
-                        <iframe src="https://www.youtube.com/embed/ardtvdR28SQ?si=RkEUcEXLoF5Se1pf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="w-full h-[200px] md:h-[304px] rounded-md z-20" loading="lazy"></iframe>
-                    </div>
-                    <div class="swiper-slide">
-                        <iframe src="https://www.youtube.com/embed/ardtvdR28SQ?si=RkEUcEXLoF5Se1pf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="w-full h-[200px] md:h-[304px] rounded-md z-20" loading="lazy"></iframe>
-                    </div>
-                </div>
+                    <!-- 
+                ### INTRUCTIONS TO CHANGE VIDEO LINK ###
+                1. COPY THE VIDEO LINK FROM YOUTUBE THE CHECK THE LINK
+                
+                2. PASTE THE WHOLE LINK IN THE A HREF TO REDIRECT THE URL TO YOUR YOUTUBE VIDEO
+                3. FOR SHOWING LIVE VIDEO THUMBNAIL, IF CHECK THIS EXAMPLE LINK ( https://www.youtube.com/watch?v=ardtvdR28SQ )IN THIS URL THE PART (v=ardtvdR28SQ) THAT "ardtvdR28SQ" IS THE VIDEO ID NOW IN THE IMG TAG PASTE THE VIDEO IS AFTER PART "vi/"
+                https://img.youtube.com/vi/YOUR-VIDEO-ID/maxresdefault.jpg
+    -->
+                    <a class="swiper-slide relative max-w-xl rounded-md overflow-hidden" href="https://youtube.com/watch?v=ardtvdR28SQ" target="_blank">
+                        <img src="https://img.youtube.com/vi/ardtvdR28SQ/maxresdefault.jpg" alt="Video Thumbnail" class="w-full h-[200px] md:h-[304px] object-cover rounded-md">
+                        <div class="absolute inset-0 flex items-center justify-center bg-textPrimary bg-opacity-30 z-30">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="80" height="80" viewBox="0,0,256,256">
+                                <g fill="#FA4641" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                    <g transform="scale(3.55556,3.55556)">
+                                        <path d="M61.115,18.856c2.551,2.647 2.885,6.853 2.885,17.144c0,10.291 -0.334,14.497 -2.885,17.144c-2.552,2.647 -5.209,2.856 -25.115,2.856c-19.906,0 -22.563,-0.209 -25.115,-2.856c-2.551,-2.647 -2.885,-6.853 -2.885,-17.144c0,-10.291 0.334,-14.497 2.885,-17.144c2.551,-2.647 5.209,-2.856 25.115,-2.856c19.906,0 22.563,0.209 25.115,2.856zM31.464,44.476l13.603,-8.044l-13.603,-7.918z"></path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="absolute bottom-4 left-4 z-30 flex items-center space-x-2">
+                            <span class="text-bgPrimary text-sm font-semibold">Watch on YouTube <i class="fas fa-up-right-from-square text-bgPrimary"></i></span>
+                        </div>
+                    </a>
 
+                    <!-- 
+                ### INTRUCTIONS TO CHANGE VIDEO LINK ###
+                1. COPY THE VIDEO LINK FROM YOUTUBE THE CHECK THE LINK
+                
+                2. PASTE THE WHOLE LINK IN THE A HREF TO REDIRECT THE URL TO YOUR YOUTUBE VIDEO
+                3. FOR SHOWING LIVE VIDEO THUMBNAIL, IF CHECK THIS EXAMPLE LINK ( https://www.youtube.com/watch?v=ardtvdR28SQ )IN THIS URL THE PART (v=ardtvdR28SQ) THAT "ardtvdR28SQ" IS THE VIDEO ID NOW IN THE IMG TAG PASTE THE VIDEO IS AFTER PART "vi/"
+                https://img.youtube.com/vi/YOUR-VIDEO-ID/maxresdefault.jpg
+    -->
+                    <a class="swiper-slide relative max-w-xl rounded-md overflow-hidden" href="https://youtube.com/watch?v=ardtvdR28SQ" target="_blank">
+                        <img src="https://img.youtube.com/vi/ardtvdR28SQ/maxresdefault.jpg" alt="Video Thumbnail" class="w-full h-[200px] md:h-[304px] object-cover rounded-md">
+                        <div class="absolute inset-0 flex items-center justify-center bg-textPrimary bg-opacity-30 z-30">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="80" height="80" viewBox="0,0,256,256">
+                                <g fill="#FA4641" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                    <g transform="scale(3.55556,3.55556)">
+                                        <path d="M61.115,18.856c2.551,2.647 2.885,6.853 2.885,17.144c0,10.291 -0.334,14.497 -2.885,17.144c-2.552,2.647 -5.209,2.856 -25.115,2.856c-19.906,0 -22.563,-0.209 -25.115,-2.856c-2.551,-2.647 -2.885,-6.853 -2.885,-17.144c0,-10.291 0.334,-14.497 2.885,-17.144c2.551,-2.647 5.209,-2.856 25.115,-2.856c19.906,0 22.563,0.209 25.115,2.856zM31.464,44.476l13.603,-8.044l-13.603,-7.918z"></path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="absolute bottom-4 left-4 z-30 flex items-center space-x-2">
+                            <span class="text-bgPrimary text-sm font-semibold">Watch on YouTube <i class="fas fa-up-right-from-square text-bgPrimary"></i></span>
+                        </div>
+                    </a>
+
+                    <!-- 
+                ### INTRUCTIONS TO CHANGE VIDEO LINK ###
+                1. COPY THE VIDEO LINK FROM YOUTUBE THE CHECK THE LINK
+                
+                2. PASTE THE WHOLE LINK IN THE A HREF TO REDIRECT THE URL TO YOUR YOUTUBE VIDEO
+                3. FOR SHOWING LIVE VIDEO THUMBNAIL, IF CHECK THIS EXAMPLE LINK ( https://www.youtube.com/watch?v=ardtvdR28SQ )IN THIS URL THE PART (v=ardtvdR28SQ) THAT "ardtvdR28SQ" IS THE VIDEO ID NOW IN THE IMG TAG PASTE THE VIDEO IS AFTER PART "vi/"
+                https://img.youtube.com/vi/YOUR-VIDEO-ID/maxresdefault.jpg
+    -->
+                    <a class="swiper-slide relative max-w-xl rounded-md overflow-hidden" href="https://youtube.com/watch?v=ardtvdR28SQ" target="_blank">
+                        <img src="https://img.youtube.com/vi/ardtvdR28SQ/maxresdefault.jpg" alt="Video Thumbnail" class="w-full h-[200px] md:h-[304px] object-cover rounded-md">
+                        <div class="absolute inset-0 flex items-center justify-center bg-textPrimary bg-opacity-30 z-30">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="80" height="80" viewBox="0,0,256,256">
+                                <g fill="#FA4641" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                    <g transform="scale(3.55556,3.55556)">
+                                        <path d="M61.115,18.856c2.551,2.647 2.885,6.853 2.885,17.144c0,10.291 -0.334,14.497 -2.885,17.144c-2.552,2.647 -5.209,2.856 -25.115,2.856c-19.906,0 -22.563,-0.209 -25.115,-2.856c-2.551,-2.647 -2.885,-6.853 -2.885,-17.144c0,-10.291 0.334,-14.497 2.885,-17.144c2.551,-2.647 5.209,-2.856 25.115,-2.856c19.906,0 22.563,0.209 25.115,2.856zM31.464,44.476l13.603,-8.044l-13.603,-7.918z"></path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="absolute bottom-4 left-4 z-30 flex items-center space-x-2">
+                            <span class="text-bgPrimary text-sm font-semibold">Watch on YouTube <i class="fas fa-up-right-from-square text-bgPrimary"></i></span>
+                        </div>
+                    </a>
+
+                    <!-- 
+                ### INTRUCTIONS TO CHANGE VIDEO LINK ###
+                1. COPY THE VIDEO LINK FROM YOUTUBE THE CHECK THE LINK
+                
+                2. PASTE THE WHOLE LINK IN THE A HREF TO REDIRECT THE URL TO YOUR YOUTUBE VIDEO
+                3. FOR SHOWING LIVE VIDEO THUMBNAIL, IF CHECK THIS EXAMPLE LINK ( https://www.youtube.com/watch?v=ardtvdR28SQ )IN THIS URL THE PART (v=ardtvdR28SQ) THAT "ardtvdR28SQ" IS THE VIDEO ID NOW IN THE IMG TAG PASTE THE VIDEO IS AFTER PART "vi/"
+                https://img.youtube.com/vi/YOUR-VIDEO-ID/maxresdefault.jpg
+    -->
+                    <a class="swiper-slide relative max-w-xl rounded-md overflow-hidden" href="https://youtube.com/watch?v=ardtvdR28SQ" target="_blank">
+                        <img src="https://img.youtube.com/vi/ardtvdR28SQ/maxresdefault.jpg" alt="Video Thumbnail" class="w-full h-[200px] md:h-[304px] object-cover rounded-md">
+                        <div class="absolute inset-0 flex items-center justify-center bg-textPrimary bg-opacity-30 z-30">
+                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="80" height="80" viewBox="0,0,256,256">
+                                <g fill="#FA4641" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                    <g transform="scale(3.55556,3.55556)">
+                                        <path d="M61.115,18.856c2.551,2.647 2.885,6.853 2.885,17.144c0,10.291 -0.334,14.497 -2.885,17.144c-2.552,2.647 -5.209,2.856 -25.115,2.856c-19.906,0 -22.563,-0.209 -25.115,-2.856c-2.551,-2.647 -2.885,-6.853 -2.885,-17.144c0,-10.291 0.334,-14.497 2.885,-17.144c2.551,-2.647 5.209,-2.856 25.115,-2.856c19.906,0 22.563,0.209 25.115,2.856zM31.464,44.476l13.603,-8.044l-13.603,-7.918z"></path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="absolute bottom-4 left-4 z-30 flex items-center space-x-2">
+                            <span class="text-bgPrimary text-sm font-semibold">Watch on YouTube <i class="fas fa-up-right-from-square text-bgPrimary"></i></span>
+                        </div>
+                    </a>
+                    <!-- ADD MORE VIDEOS AS SAME TEMPALTE CODE IS PROVIDED ABOVE -->
+                </div>
 
                 <div class="custom-prev absolute left-0 top-1/2 -mt-10 transform -translate-y-1/2">
                     <button class="w-8 h-8 flex items-center border-2 border-primary justify-center rounded-full hover:bg-primary text-primary transition z-30 duration-300 ease-in-out hover:text-bgPrimary">
@@ -452,10 +544,12 @@ $stmtLatest->close();
             </div>
         </div>
     </div>
-</div> -->
+</div>
 
 
-<section class="bg-[url('<?= getAsset('cta.jpg', 'images/'); ?>')] bg-cover bg-no-repeat bg-center my-10 py-10">
+
+
+<section class="bg-[url('<?= getAsset('cta.webp', 'images/'); ?>')] bg-cover bg-no-repeat bg-center my-10 py-10">
     <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
         <div class="mx-auto max-w-screen-sm text-center">
             <h2 class="mb-4 text-4xl tracking-tight font-extrabold leading-tight text-bgPrimary">Capture Your Special Day</h2>
@@ -487,7 +581,7 @@ $stmtLatest->close();
                             again!"</p>
                     </blockquote>
                     <figcaption class="flex items-center justify-center mt-6 space-x-3">
-                        <img class="w-6 h-6 rounded-full" src="<?= getAsset('reviewer-1.jpg', 'images/'); ?>" alt="Reviewer Image" loading="lazy">
+                        <img class="w-6 h-6 rounded-full" src="<?= getAsset('reviewer-1.webp', 'images/'); ?>" alt="Reviewer Image" loading="lazy">
                         <div class="flex items-center divide-x-2 divide-textSecondary">
                             <div class="pr-3 font-medium text-textPrimary">Kumar C</div>
                             <!-- <div class="pl-3 text-sm font-light text-textSecondary">Entrepreneur, Mumbai</div> -->
@@ -510,7 +604,7 @@ $stmtLatest->close();
                             work with you. guys, great job"</p>
                     </blockquote>
                     <figcaption class="flex items-center justify-center mt-6 space-x-3">
-                        <img class="w-6 h-6 rounded-full" src="<?= getAsset('reviewer-2.jpg', 'images/'); ?>" alt="Reviewer Image" loading="lazy">
+                        <img class="w-6 h-6 rounded-full" src="<?= getAsset('reviewer-2.webp', 'images/'); ?>" alt="Reviewer Image" loading="lazy">
                         <div class="flex items-center divide-x-2 divide-textSecondary">
                             <div class="pr-3 font-medium text-textPrimary">Bharati</div>
                         </div>
@@ -532,7 +626,7 @@ $stmtLatest->close();
                             us amazing pictures. Jeevansathi Studio We loved your Team work."</p>
                     </blockquote>
                     <figcaption class="flex items-center justify-center mt-6 space-x-3">
-                        <img class="w-6 h-6 rounded-full" src="<?= getAsset('reviewer-3.jpg', 'images/'); ?>" alt="Reviewer Image" loading="lazy">
+                        <img class="w-6 h-6 rounded-full" src="<?= getAsset('reviewer-3.webp', 'images/'); ?>" alt="Reviewer Image" loading="lazy">
                         <div class="flex items-center divide-x-2 divide-textSecondary">
                             <div class="pr-3 font-medium text-textPrimary">Pankaj K</div>
                         </div>
@@ -560,7 +654,7 @@ $stmtLatest->close();
 <div id="photoshoot" class="container mx-auto px-4 py-8">
     <div class="container mx-auto text-center mt-6 mb-12">
         <h2 class="text-3xl font-bold leading-snug text-textPrimary lg:text-4xl">Latest PhotoShoot</h2>
-        <img src="<?= getAsset('heading-decoration.png', 'images/') ?>" class="h-12 -mt-1 mx-auto" alt="Heading Decoration">
+        <img src="<?= getAsset('heading-decoration.webp', 'images/') ?>" class="h-12 -mt-1 mx-auto" alt="Heading Decoration">
     </div>
     <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
         <?php
@@ -600,7 +694,7 @@ $stmtLatest->close();
 <div id="pricing" class="container mx-auto px-4 py-16">
     <div class="container mx-auto text-center mt-6 mb-12">
         <h2 class="text-3xl font-bold leading-snug text-textPrimary lg:text-4xl">Pricing Plans</h2>
-        <img src="<?= getAsset('heading-decoration.png', 'images/') ?>" class="h-12 -mt-1 mx-auto" alt="Heading Decoration">
+        <img src="<?= getAsset('heading-decoration.webp', 'images/') ?>" class="h-12 -mt-1 mx-auto" alt="Heading Decoration">
     </div>
 
     <div class="grid gap-8 lg:grid-cols-3 lg:gap-12">
@@ -728,7 +822,7 @@ $stmtLatest->close();
 <div class="container mx-auto px-4">
     <div class="container mx-auto text-center mt-6 mb-12">
         <h2 class="text-3xl font-bold leading-snug text-textPrimary lg:text-4xl">Contact Us</h2>
-        <img src="<?= getAsset('heading-decoration.png', 'images/') ?>" class="h-12 -mt-1 mx-auto" alt="Heading Decoration">
+        <img src="<?= getAsset('heading-decoration.webp', 'images/') ?>" class="h-12 -mt-1 mx-auto" alt="Heading Decoration">
     </div>
     <div class="md:flex mt-6 mb-10 md:space-x-10 items-start z-1">
         <div class="md:w-6/12 md:mt-0">

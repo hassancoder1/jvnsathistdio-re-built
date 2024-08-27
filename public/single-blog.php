@@ -75,7 +75,14 @@ if (isset($urlPath[1]) && !empty($urlPath[1])) {
         <div class="text-center">
             <h1 class="text-4xl font-bold tracking-tight text-textPrimary sm:text-6xl"><?= htmlspecialchars($post['title'] ?? 'Blog Title Goes Here'); ?></h1>
             <p class="mt-6 text-lg leading-8 text-textSecondary">
-                Home / <?= htmlspecialchars(ucwords(str_replace('-', ' ', implode(' / ', explode('/', trim($_SERVER['REQUEST_URI'], '/')))))); ?>
+                <span class="flex justify-center items-center"><svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                        <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                    </svg>
+                    <?php
+                    $url = explode('/', trim($_SERVER['REQUEST_URI'], '/'));
+                    echo 'Home / ' . ucwords(str_replace('-', ' ', implode(' / ', $url)));
+                    ?>
+                </span>
             </p>
         </div>
     </div>

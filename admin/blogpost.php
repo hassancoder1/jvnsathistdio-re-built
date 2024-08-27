@@ -6,7 +6,7 @@ if (!isset($_GET['id'])) {
     $pageTitle = "Add New Blog Post";
     $postTitle = "";
     $imageSrc = "";
-    $imageUIText = "Click to add image";
+    $imageUIText = "Click to Add an Image <br> Use a horizontal image here, ratio of ( 16:9 )";
     $buttonText = "Add Post";
     $Content = "";
     $postId = ""; // No ID for new posts
@@ -54,7 +54,7 @@ if (!isset($_GET['id'])) {
                 <input type="file" id="image" name="image" class="hidden" accept="image/*" onchange="previewImage(event)">
                 <label for="image" class="flex h-64 w-full rounded-md border border-textPrimary/60 bg-bgPrimary cursor-pointer overflow-hidden flex-col items-center justify-center relative">
                     <div id="imagePreview" class="w-full h-full flex items-center justify-center bg-gray-100">
-                        <span class="text-textSecondary"> <?= htmlspecialchars($imageUIText); ?></span>
+                        <span class="text-textSecondary text-center"> <?= $imageUIText; ?></span>
                         <?php if ($imageSrc): ?>
                             <img src="<?= htmlspecialchars(ROOT_URL . ASSETS . "images/" . UPLOADS . $imageSrc); ?>" class="w-full h-full object-cover" />
                         <?php endif; ?>
@@ -100,7 +100,7 @@ if (!isset($_GET['id'])) {
 
             reader.readAsDataURL(file);
         } else {
-            preview.innerHTML = '<span class="text-textSecondary">Click to add image</span>';
+            preview.innerHTML = '<span class="text-textSecondary text-center">Click to Add an Image<br>Use a horizontal image hero ratio of ( 16:9 )</span>';
         }
     }
 

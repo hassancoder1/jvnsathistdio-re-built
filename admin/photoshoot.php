@@ -11,7 +11,7 @@
         ?>
             <div class="relative group rounded-lg overflow-hidden border-2">
                 <img src="<?= getAsset($row['image_path'], 'images/' . UPLOADS); ?>" class="w-full h-full object-cover" alt="<?= htmlspecialchars($row['name']); ?>">
-                <div class="absolute inset-0 bg-black/50 group-hover:bg-black/60 transition"></div>
+                <div class="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition"></div>
                 <div class="absolute bottom-0 left-0 right-0 bg-bgPrimary py-2 px-4 flex justify-between items-center">
                     <div>
                         <h3 class="text-md font-semibold text-textPrimary"><?= htmlspecialchars($row['name']); ?></h3>

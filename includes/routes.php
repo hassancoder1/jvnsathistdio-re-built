@@ -54,8 +54,8 @@ $adminRoutes = [
         'label' => 'Add Images',
         'icon' => 'fa-plus'
     ],
-    'hero-slider' => [
-        'file' => 'hero-slider.php',
+    'hero' => [
+        'file' => 'hero-images.php',
         'title' => 'Manage Hero Slider Images',
         'description' => 'Manage Hero Slider Images',
         'label' => 'Hero Slider',

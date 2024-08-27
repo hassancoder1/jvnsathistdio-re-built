@@ -74,7 +74,7 @@ if ($endPage - $startPage < $maxVisiblePages - 1) {
                             |
                             <a href="<?= ROOT_URL . API_SLUG . "/deleteblogpost?id=" . encryptData($row['id']); ?>" class="text-red-500 hover:text-red-700"><i class="fa fa-trash-alt text-red-500 mx-2"></i></a>
                             |
-                            <a href="<?= ROOT_URL . "blog/" . $row['slug']; ?>" target="_blank" class="text-blue-500 hover:text-blue-700"><i class="fas fa-up-right-from-square text-textPrimary mr-2"></i></a>
+                            <a href="<?= ROOT_URL . SINGLE_BLOG_SLUG . "/" . $row['slug']; ?>" target="_blank" class="text-blue-500 hover:text-blue-700"><i class="fas fa-up-right-from-square text-textPrimary mr-2"></i></a>
                         </td>
                     </tr>
                 <?php endwhile; ?>

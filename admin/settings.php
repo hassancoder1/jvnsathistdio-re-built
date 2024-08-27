@@ -63,7 +63,7 @@ if ($category_result->num_rows > 0) {
     </form>
 
     <hr class="my-5">
-    <h1 class="text-3xl font-bold my-4 text-textPrimary">Website Colour Theme</h1>
+    <h1 class="text-3xl font-bold my-4 text-textPrimary" id="colorscheme">Website Colour Theme</h1>
     <form onsubmit="handleFormSubmit(event,'updatetheme','.updatetheme-form-btn-spinner','.updatetheme-form-btn-text','.updatetheme-form-response-text')" class="space-y-4 md:space-y-6 min-w-[300px] max-w-[90%]">
         <div class="flex justify-between flex-wrap md:flex-row flex-col items-center gap-12 border-b-2 border-bgSecondary">
             <!-- Text Colours  -->
@@ -115,7 +115,7 @@ if ($category_result->num_rows > 0) {
     </form>
 
     <!-- Manage Categories Section -->
-    <hr class="my-5">
+    <hr class="my-5" id="categories">
     <h1 class="text-3xl font-bold my-4 text-textPrimary">Manage Categories</h1>
 
     <!-- Existing Categories List -->

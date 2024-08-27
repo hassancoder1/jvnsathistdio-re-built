@@ -72,7 +72,7 @@ if ($endPage - $startPage < $maxVisiblePages - 1) {
                         <td class="px-6 py-4 text-textSecondary"><?= htmlspecialchars($row['service'], ENT_QUOTES, 'UTF-8'); ?></td>
                         <td class="px-6 py-4 text-textSecondary"><?= date('F j, Y, g:i a', strtotime($row['event_start_time'])); ?></td>
                         <td class="px-6 py-4 text-textSecondary"><?= date('F j, Y, g:i a', strtotime($row['event_end_time'])); ?></td>
-                        <td class="px-6 py-4 text-textSecondary"><?= htmlspecialchars($row['event_location'], ENT_QUOTES, 'UTF-8'); ?></td>
+                        <td class="px-6 py-4 text-textSecondary"><?= htmlspecialchars(decryptData($row['event_location']), ENT_QUOTES, 'UTF-8'); ?></td>
                         <td class="px-6 py-4 text-textSecondary"><?= htmlspecialchars($row['plan'], ENT_QUOTES, 'UTF-8'); ?></td>
                         <td class="px-6 py-4 text-textSecondary"><?= htmlspecialchars($row['details'], ENT_QUOTES, 'UTF-8'); ?></td>
                         <td class="px-6 py-4 text-textSecondary"><?= date('F j, Y, g:i a', strtotime($row['submitted_at'])); ?></td>

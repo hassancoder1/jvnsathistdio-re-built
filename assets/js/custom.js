@@ -131,7 +131,7 @@ function populateThumbnails(section, selectedImg) {
         const imgSrc = $(this).attr('src');
         const title = $(this).data('title');
         const category = $(this).data('category');
-        thumbnailsHtml += `<img class="h-[100px] w-auto rounded-lg cursor-pointer thumbnail" src="${imgSrc}" data-title="${title}" data-category="${category}">`;
+        thumbnailsHtml += `<img class="h-[100px] w-auto rounded-lg cursor-pointer hover:ring-primary ring-2 ring-transparent ring-offset-2 thumbnail" src="${imgSrc}" data-title="${title}" data-category="${category}">`;
     });
 
     $('.thumbnails').html(thumbnailsHtml);
