@@ -1,17 +1,4 @@
 <?php
-
-$postsPerPage = 9;
-
-// Get current page number from URL
-if (isset($urlPath[2]) && $urlPath[2] === "page") {
-    $pageNumber = (int)$urlPath[3];
-} else {
-    $pageNumber = 1;
-}
-
-// Calculate the offset for the SQL query
-$offset = ($pageNumber - 1) * $postsPerPage;
-
 // Fetch the single post based on the slug
 if (isset($urlPath[1]) && !empty($urlPath[1])) {
     $slug = $conn->real_escape_string($urlPath[1]);
@@ -28,7 +15,7 @@ if (isset($urlPath[1]) && !empty($urlPath[1])) {
     } else {
         echo "<meta http-equiv='refresh' content='0; url=" . ROOT_URL . "404'>";
 ?>
-<?php
+    <?php
     }
 
     // Fetch the previous post
@@ -59,10 +46,9 @@ if (isset($urlPath[1]) && !empty($urlPath[1])) {
 
     $stmt->close();
 } else {
-    // Handle the case where slug is not provided
-    $post = null;
-    $prevPost = null;
-    $nextPost = null;
+    echo "<meta http-equiv='refresh' content='0; url=" . ROOT_URL . "404'>";
+    ?>
+<?php
 }
 ?>
 
@@ -71,9 +57,9 @@ if (isset($urlPath[1]) && !empty($urlPath[1])) {
     <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
         <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-secondary to-primary opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
     </div>
-    <div class="mx-auto max-w-2xl mt-10 py-32 sm:py-48 lg:py-36">
+    <div class="mx-auto max-w-2xl h-2/4 mt-10 py-32 sm:py-48 lg:py-36">
         <div class="text-center">
-            <h1 class="text-4xl font-bold tracking-tight text-textPrimary sm:text-6xl"><?= htmlspecialchars($post['title'] ?? 'Blog Title Goes Here'); ?></h1>
+            <h1 class="text-4xl font-bold tracking-tight text-textPrimary sm:text-6xl"><?= htmlspecialchars($post['title']); ?></h1>
             <p class="mt-6 text-lg leading-8 text-textSecondary">
                 <span class="flex justify-center items-center"><svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                         <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
@@ -86,10 +72,7 @@ if (isset($urlPath[1]) && !empty($urlPath[1])) {
             </p>
         </div>
     </div>
-    <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
-        <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-primary to-secondary opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-    </div>
-</div>
+</div> <!-- gradient end -->
 
 <!-- Blog Content -->
 <div class="bg-bgPrimary">

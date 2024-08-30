@@ -50,14 +50,14 @@ $colorTheme = json_decode(decryptData($colorTheme['value']), true);
 ?>
 
 <main class="w-full">
-    <div class="bg-white p-6 rounded-lg">
+    <div class="bg-bgPrimary p-2 md:p-6 rounded-lg">
         <h1 class="text-3xl font-bold text-textPrimary mb-4">Admin Dashboard</h1>
         <p class="mb-4">Access all pages from the sidebar</p>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-6">
 
             <!-- Total Posts and Recent Posts -->
-            <div class="bg-bgPrimary border-2 p-4 rounded-lg h-auto">
+            <div class="bg-bgPrimary border-2 p-4 rounded-lg h-auto w-full">
                 <span class="text-xl font-semibold text-textPrimary mr-2">Total Posts</span>
                 <span class="text-textPrimary text-2xl">( <?= $total_posts; ?> )</span>
                 <ul class="mt-2 list-disc ml-6">
@@ -78,7 +78,7 @@ $colorTheme = json_decode(decryptData($colorTheme['value']), true);
             </div>
 
             <!-- Total Images and Locations -->
-            <div class="bg-bgPrimary border-2 p-4 rounded-lg h-auto">
+            <div class="bg-bgPrimary border-2 p-4 rounded-lg h-auto w-full">
                 <span class="text-xl font-semibold text-textPrimary mr-2">Total Images</span>
                 <span class="text-textPrimary text-2xl">( <?= $total_images; ?> )</span>
                 <ul class="mt-2 list-disc ml-6">
@@ -89,7 +89,7 @@ $colorTheme = json_decode(decryptData($colorTheme['value']), true);
             </div>
 
             <!-- Image Counts by Category -->
-            <div class="bg-bgPrimary border-2 p-4 rounded-lg h-auto">
+            <div class="bg-bgPrimary border-2 p-4 rounded-lg h-auto w-full">
                 <h2 class="text-xl font-semibold text-textPrimary">Images by Categories</h2>
                 <ul class="mt-2 list-disc ml-6">
                     <?php foreach ($categories as $category): ?>
@@ -104,7 +104,7 @@ $colorTheme = json_decode(decryptData($colorTheme['value']), true);
             </div>
 
             <!-- Top 3 Contact Form Entries -->
-            <div class="bg-bgPrimary border-2 p-4 rounded-lg h-auto">
+            <div class="bg-bgPrimary border-2 p-4 rounded-lg h-auto w-full">
                 <h2 class="text-xl font-semibold text-textPrimary">Latest Contact Form Entries</h2>
                 <ul class="mt-2 list-disc ml-6">
                     <?php foreach ($top_contact_entries as $entry): ?>
@@ -115,7 +115,7 @@ $colorTheme = json_decode(decryptData($colorTheme['value']), true);
             </div>
 
             <!-- Top 3 Get Quote Form Entries -->
-            <div class="bg-bgPrimary border-2 p-4 rounded-lg h-auto">
+            <div class="bg-bgPrimary border-2 p-4 rounded-lg h-auto w-full">
                 <h2 class="text-xl font-semibold text-textPrimary">Latest Get Quote Entries</h2>
                 <ul class="mt-2 list-disc ml-6">
                     <?php foreach ($top_quote_entries as $entry): ?>
@@ -126,7 +126,7 @@ $colorTheme = json_decode(decryptData($colorTheme['value']), true);
             </div>
 
             <!-- Color Scheme and Total Views -->
-            <div class="bg-bgPrimary border-2 p-4 rounded-lg h-auto">
+            <div class="bg-bgPrimary border-2 p-4 rounded-lg h-auto w-full">
                 <h2 class="text-xl font-semibold text-textPrimary">Website Color Scheme</h2>
                 <ul class="mt-2">
                     <li class="text-textPrimary my-1">Primary Text: <span class="text-bgPrimary bg-textPrimary mr-2 p-0.5 rounded-md"><?= $colorTheme['textPrimary']; ?> </span> => <span class="bg-textPrimary ml-2 px-2.5 py-0 rounded-full"></span>

@@ -66,41 +66,54 @@ if ($category_result->num_rows > 0) {
     <h1 class="text-3xl font-bold my-4 text-textPrimary" id="colorscheme">Website Colour Theme</h1>
     <form onsubmit="handleFormSubmit(event,'updatetheme','.updatetheme-form-btn-spinner','.updatetheme-form-btn-text','.updatetheme-form-response-text')" class="space-y-4 md:space-y-6 min-w-[300px] max-w-[90%]">
         <div class="flex justify-between flex-wrap md:flex-row flex-col items-center gap-12 border-b-2 border-bgSecondary">
-            <!-- Text Colours  -->
+            <!-- Text Colours -->
             <div class="flex-1 flex justify-between items-center my-4 max-w-[300px]">
                 <label for="textprimary" class="font-semibold text-textPrimary">Primary Text Colour: </label>
-                <input type="color" id="textprimary" name="textprimary" class="w-10 h-10 cursor-pointer border-none outline-none rounded-full" value="<?= htmlspecialchars($colorTheme['textPrimary']); ?>">
+                <input type="color" id="textprimarycolor" name="textprimarycolorfield" class="w-8 h-6 cursor-pointer border-none outline-none rounded-full" value="<?= htmlspecialchars($colorTheme['textPrimary']); ?>">
+                <input type="text" id="textprimary" name="textprimarytextfield" class="w-20 h-9 border-2 outline-none rounded-md pl-2 hidden" value="<?= htmlspecialchars($colorTheme['textPrimary']); ?>">
             </div>
 
             <div class="flex-1 flex justify-between items-center my-4 max-w-[300px]">
                 <label for="textsecondary" class="font-semibold text-textPrimary">Secondary Text Colour: </label>
-                <input type="color" id="textsecondary" name="textsecondary" class="w-10 h-10 cursor-pointer border-none outline-none rounded-full" value="<?= htmlspecialchars($colorTheme['textSecondary']); ?>">
+                <input type="color" id="textsecondarycolor" name="textsecondarycolorfield" class="w-8 h-6 cursor-pointer border-none outline-none rounded-full" value="<?= htmlspecialchars($colorTheme['textSecondary']); ?>">
+                <input type="text" id="textsecondary" name="textsecondarytextfield" class="w-20 h-9 border-2 outline-none rounded-md pl-2 hidden" value="<?= htmlspecialchars($colorTheme['textSecondary']); ?>">
             </div>
         </div>
 
         <div class="flex justify-between flex-wrap md:flex-row flex-col items-center gap-12 border-b-2 border-bgSecondary">
-            <!-- Background Colours  -->
+            <!-- Background Colours -->
             <div class="flex-1 flex justify-between items-center my-4 max-w-[300px]">
                 <label for="bgprimary" class="font-semibold text-textPrimary">Primary Background Colour: </label>
-                <input type="color" id="bgprimary" name="bgprimary" class="w-10 h-10 cursor-pointer border-none outline-none rounded-full" value="<?= htmlspecialchars($colorTheme['bgPrimary']); ?>">
+                <input type="color" id="bgprimarycolor" name="bgprimarycolorfield" class="w-8 h-6 cursor-pointer border-none outline-none rounded-full" value="<?= htmlspecialchars($colorTheme['bgPrimary']); ?>">
+                <input type="text" id="bgprimary" name="bgprimarytextfield" class="w-20 h-9 border-2 outline-none rounded-md pl-2 hidden" value="<?= htmlspecialchars($colorTheme['bgPrimary']); ?>">
             </div>
 
             <div class="flex-1 flex justify-between items-center my-4 max-w-[300px]">
                 <label for="bgsecondary" class="font-semibold text-textPrimary">Secondary Background Colour: </label>
-                <input type="color" id="bgsecondary" name="bgsecondary" class="w-10 h-10 cursor-pointer border-none outline-none rounded-full" value="<?= htmlspecialchars($colorTheme['bgSecondary']); ?>">
+                <input type="color" id="bgsecondarycolor" name="bgsecondarycolorfield" class="w-8 h-6 cursor-pointer border-none outline-none rounded-full" value="<?= htmlspecialchars($colorTheme['bgSecondary']); ?>">
+                <input type="text" id="bgsecondary" name="bgsecondarytextfield" class="w-20 h-9 border-2 outline-none rounded-md pl-2 hidden" value="<?= htmlspecialchars($colorTheme['bgSecondary']); ?>">
             </div>
         </div>
 
         <div class="flex justify-between flex-wrap md:flex-row flex-col items-center gap-12 border-b-2 border-bgSecondary">
-            <!-- Accent Colours  -->
+            <!-- Accent Colours -->
             <div class="flex-1 flex justify-between items-center my-4 max-w-[300px]">
                 <label for="primary" class="font-semibold text-textPrimary">Primary Accent Colour: </label>
-                <input type="color" id="primary" name="primary" class="w-10 h-10 cursor-pointer border-none outline-none rounded-full" value="<?= htmlspecialchars($colorTheme['primary']); ?>">
+                <input type="color" id="primarycolor" name="primarycolorfield" class="w-8 h-6 cursor-pointer border-none outline-none rounded-full" value="<?= htmlspecialchars($colorTheme['primary']); ?>">
+                <input type="text" id="primary" name="primarytextfield" class="w-20 h-9 border-2 outline-none rounded-md pl-2 hidden" value="<?= htmlspecialchars($colorTheme['primary']); ?>">
             </div>
 
             <div class="flex-1 flex justify-between items-center my-4 max-w-[300px]">
                 <label for="secondary" class="font-semibold text-textPrimary">Secondary Accent Colour: </label>
-                <input type="color" id="secondary" name="secondary" class="w-10 h-10 cursor-pointer border-none outline-none rounded-full" value="<?= htmlspecialchars($colorTheme['secondary']); ?>">
+                <input type="color" id="secondarycolor" name="secondarycolorfield" class="w-8 h-6 cursor-pointer border-none outline-none rounded-full" value="<?= htmlspecialchars($colorTheme['secondary']); ?>">
+                <input type="text" id="secondary" name="secondarytextfield" class="w-20 h-9 border-2 outline-none rounded-md pl-2 hidden" value="<?= htmlspecialchars($colorTheme['secondary']); ?>">
+            </div>
+        </div>
+
+        <div class="flex justify-between flex-wrap md:flex-row flex-col items-center gap-12 border-b-2 border-bgSecondary">
+            <div class="flex-1 flex justify-between items-center my-4 max-w-[300px]">
+                <label for="usehexvalue" class="font-semibold text-textPrimary">Use Hex Values Instead? </label>
+                <input type="checkbox" id="usehexvalue" name="usehexvalue" class="w-6 h-6 cursor-pointer border-none outline-none rounded-full">
             </div>
         </div>
 
@@ -113,6 +126,46 @@ if ($category_result->num_rows > 0) {
         </button>
         <span class="text-sm ml-4 text-center font-light text-textPrimary updatetheme-form-response-text"></span>
     </form>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function toggleTextInputs(checked) {
+                const textInputs = document.querySelectorAll('input[type="text"]');
+                textInputs.forEach(input => {
+                    if (input.id.startsWith('textprimary') ||
+                        input.id.startsWith('textsecondary') ||
+                        input.id.startsWith('bgprimary') ||
+                        input.id.startsWith('bgsecondary') ||
+                        input.id.startsWith('primary') ||
+                        input.id.startsWith('secondary')) {
+                        input.classList.toggle('hidden', !checked);
+                    }
+                });
+            }
+
+            function syncColorAndTextInputs() {
+                const colorInputs = document.querySelectorAll('input[type="color"]');
+                colorInputs.forEach(colorInput => {
+                    const textInput = document.querySelector(`input[name="${colorInput.name.replace('colorfield', 'textfield')}"]`);
+                    if (textInput) {
+                        colorInput.addEventListener('input', function() {
+                            textInput.value = colorInput.value;
+                        });
+                        textInput.addEventListener('input', function() {
+                            colorInput.value = textInput.value;
+                        });
+                    }
+                });
+            }
+
+            const checkbox = document.getElementById('usehexvalue');
+            checkbox.addEventListener('change', function() {
+                toggleTextInputs(this.checked);
+            });
+            toggleTextInputs(checkbox.checked);
+            syncColorAndTextInputs();
+        });
+    </script>
+
 
     <!-- Manage Categories Section -->
     <hr class="my-5" id="categories">

@@ -11,10 +11,10 @@ $routes = [
         'title' => 'Get Quote Form',
         'description' => 'This is the Get Quote Form page',
     ],
-    'test' => [
-        'file' => 'test.php',
-        'title' => 'Test Page',
-        'description' => 'This is a test page',
+    'pricing-and-plans' => [
+        'file' => 'pricing-and-plans.php',
+        'title' => 'Pricing & Plans | Suman Studio & Films',
+        'description' => 'Pricing & Plans',
     ],
     'terms-and-policies' => [
         'file' => 'terms-and-policies.php',
@@ -138,22 +138,22 @@ $defaultRoute = [
     'description' => 'Page not found',
 ];
 
-function check_slug_and_load_blog($slug, $pageDetails)
-{
-    // ### This function is Not abandond but used a bit. But whole single blog functionality relays on this function. To complete this function you'll have to change many things. So leave it as it's working.
-    $found = true; // Replace with actual check from the database
+// function check_slug_and_load_blog($slug, $pageDetails)
+// {
+//     // ### This function is Not abandond but used a bit. But whole single blog functionality relays on this function. To complete this function you'll have to change many things. So leave it as it's working.
+//     $found = true; // Replace with actual check from the database
 
-    if ($found) {
-        $pageDetails['title'] = "Sample Blog Title for $slug";
-        $pageDetails['description'] = "This is the description for the blog with slug $slug.";
-        $pageDetails['blog_content'] = "This is the content of the blog post => $slug";
-    } else {
-        $pageDetails = [
-            'file' => '404.php',
-            'title' => '404 Not Found',
-            'description' => 'Page not found',
-        ];
-    }
+//     if ($found) {
+//         $pageDetails['title'] = "Sample Blog Title for $slug";
+//         $pageDetails['description'] = "This is the description for the blog with slug $slug.";
+//         $pageDetails['blog_content'] = "This is the content of the blog post => $slug";
+//     } else {
+//         $pageDetails = [
+//             'file' => '404.php',
+//             'title' => '404 Not Found',
+//             'description' => 'Page not found',
+//         ];
+//     }
 
-    return $pageDetails;
-}
+//     return $pageDetails;
+// }

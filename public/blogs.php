@@ -48,7 +48,7 @@ if ($endPage - $startPage < $maxVisiblePages - 1) {
     <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
         <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-secondary to-primary opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon()"></div>
     </div>
-    <div class="mx-auto min-h-screen max-w-2xl mt-10 py-32 sm:py-48 lg:py-36">
+    <div class="mx-auto h-2/4 max-w-2xl mt-10 py-32 sm:py-48 lg:py-36">
         <div class="text-center">
             <h1 class="text-4xl font-bold tracking-tight text-textPrimary sm:text-6xl">Our Blog Posts</h1>
 
@@ -64,17 +64,14 @@ if ($endPage - $startPage < $maxVisiblePages - 1) {
             </p>
         </div>
     </div>
-    <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
-        <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-primary to-secondary opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon()"></div>
-    </div>
-</div>
+</div> <!-- gradient end -->
 
 <div class="container mx-auto px-4">
     <div class="grid grid-cols-1 gap-6 my-5 md:grid-cols-2 lg:grid-cols-3">
         <?php if ($result->num_rows > 0): ?>
             <?php while ($row = $result->fetch_assoc()): ?>
                 <div onclick="redirect('/blog/<?= $row['slug']; ?>')" class="cursor-pointer bg-bgPrimary rounded-lg ring ring-1 ring-gray-200">
-                    <img src="<?= getAsset($row['image'], 'images/' . UPLOADS); ?>" alt="<?= htmlspecialchars($row['title'], ENT_QUOTES, 'UTF-8'); ?>" class="w-full h-48 sm:h-auto object-cover rounded-md">
+                    <img src="<?= getAsset($row['image'], 'images/' . UPLOADS); ?>" alt="<?= htmlspecialchars($row['title'], ENT_QUOTES, 'UTF-8'); ?>" class="w-full h-48 sm:h-auto object-cover rounded-md aspect-video">
                     <div class="p-4">
                         <p class="text-sm text-textSecondary"><?= date('F j, Y', strtotime($row['date'])); ?></p>
                         <h3 class="text-lg font-semibold"><?= htmlspecialchars($row['title'], ENT_QUOTES, 'UTF-8'); ?></h3>

@@ -13,7 +13,7 @@ if (array_key_exists($pageKey, $routes)) {
 
     if ($pageKey === SINGLE_BLOG_SLUG) {
         $slug = $urlPath[1] ?? '';
-        $pageDetails = !empty($slug) ? check_slug_and_load_blog($slug, $pageDetails) : $defaultRoute;
+        // $pageDetails = !empty($slug) ? check_slug_and_load_blog($slug, $pageDetails) : $defaultRoute;
     } elseif ($pageKey === BLOGS_SLUG) {
         $pageNumber = isset($urlPath[2]) && $urlPath[1] === BLOGS_PAGE_SLUG ? (int)$urlPath[2] : 1;
         $pageDetails['title'] .= " - Page $pageNumber";

@@ -2,12 +2,13 @@
     <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
         <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-secondary to-primary opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
     </div>
-    <div class="mx-auto min-h-screen max-w-2xl mt-10 py-32 sm:py-48 lg:py-36">
+    <div class="mx-auto h-2/4 max-w-2xl mt-10 py-32 sm:py-48 lg:py-36">
         <div class="text-center">
             <h1 class="text-4xl font-bold tracking-tight text-textPrimary sm:text-6xl">Our Terms & Policies
             </h1>
             <p class="mt-6 text-lg leading-8 text-textSecondary">
-                <span class="flex justify-center items-center"><svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                <span class="flex justify-center items-center">
+                    <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                         <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
                     </svg>
                     <?php
@@ -16,13 +17,9 @@
                     ?>
                 </span>
             </p>
-
         </div>
     </div>
-    <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
-        <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-primary to-secondary opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
-    </div>
-</div>
+</div> <!-- gradient end -->
 
 <div class="bg-white py-5">
     <div class="container px-4 mx-auto max-w-[1024px]">
@@ -30,7 +27,7 @@
         <section class="mb-8">
             <h2 class="text-2xl font-semibold text-textPrimary mb-4">Introduction</h2>
             <p class="text-textSecondary leading-7">
-                Welcome to our Indian Wedding Photography Studio! Our terms and policies are designed to protect your rights while ensuring that our services run smoothly. By engaging with our website, you agree to adhere to the guidelines outlined below. Please review these terms carefully before using our services.
+                Welcome to Suman Studio & Films! Our terms and policies are designed to protect your rights while ensuring that our services run smoothly. By engaging with our website, you agree to adhere to the guidelines outlined below. Please review these terms carefully before using our services.
             </p>
         </section>
 
@@ -87,7 +84,7 @@
         <section class="mb-8">
             <h2 class="text-2xl font-semibold text-textPrimary mb-4">Contact Us</h2>
             <p class="text-textSecondary leading-7">
-                If you have any questions or concerns regarding our terms and policies, please feel free to <a href="/#contact" class="text-primary hover:underline">contact us</a>. We are here to ensure that your experience with our studio is nothing short of exceptional.
+                If you have any questions or concerns regarding our terms and policies, please feel free to <a href="/#contact" class="text-primary hover:underline">contact us</a>. We are here to ensure that your experience with Suman Studio & Films is nothing short of exceptional.
             </p>
         </section>
     </div>
