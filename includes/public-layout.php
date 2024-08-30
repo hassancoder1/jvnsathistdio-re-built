@@ -13,7 +13,7 @@ $MenuLinks = [
     "About" => "/#about",
     "Services" => "/#services",
     "Gallery" => "/#gallery",
-    "Pricing" => "/pricing-and-plans",
+    "Pricing" => "/pricing-plans",
     "Blogs" => "/blogs",
     "Contact" => "/#contact",
 ];
@@ -28,7 +28,7 @@ if (empty($pageKey)) {
 
 
 <body class="overflow-hidden bg-bgPrimary">
-    <div id="preloader" class="w-screen z-50 bg-bgPrimary fixed flex flex-col justify-center items-center h-screen <?php echo ($pageKey === 'blogs' || $pageKey === 'blog' || $pageKey === 'terms-and-policies') ? '-mt-[39px]' : ''; ?>">
+    <div id="preloader" class="w-screen z-50 bg-bgPrimary fixed flex flex-col justify-center items-center h-screen <?php echo ($pageKey === 'pricing-plans' || $pageKey === 'blogs' || $pageKey === 'blog' || $pageKey === 'terms-and-policies') ? '-mt-[39px]' : ''; ?>">
         <div class="container mt-24">
             <svg class="w-8 h-8 mx-auto text-textPrimary animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                 <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
@@ -65,7 +65,7 @@ if (empty($pageKey)) {
                 ?>
             </div>
             <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-                <a href="/get-a-quote" class="text-sm font-semibold leading-6 <?= $textColor; ?> hero-text">Get a quote</a>
+                <a href="https://wa.me/+916200569546" target="_blank" class="text-sm font-semibold leading-6 <?= $textColor; ?> hero-text">Get a quote</a>
             </div>
         </nav>
         <div
@@ -122,7 +122,7 @@ if (empty($pageKey)) {
                             ?>
                             <div class="py-6">
                                 <a
-                                    href="/get-a-quote"
+                                    href="https://wa.me/+916200569546" target="_blank"
                                     class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-textPrimary hover:bg-bgSecondary">Get a quote <i class="fa fa-arrow-right"></i></a>
                             </div>
                         </div>
@@ -243,9 +243,9 @@ if (empty($pageKey)) {
                             <ul class="list-unstyled">
                                 <li><a class="text-bgPrimary hover:text-bgSecondary block pb-2 text-sm" href="/#services">Services</a></li>
                                 <li><a class="text-bgPrimary hover:text-bgSecondary block pb-2 text-sm" href="/blogs">Blogs</a></li>
-                                <li><a class="text-bgPrimary hover:text-bgSecondary block pb-2 text-sm" href="/#pricing">Pricing</a></li>
+                                <li><a class="text-bgPrimary hover:text-bgSecondary block pb-2 text-sm" href="/pricing-plans">Pricing</a></li>
 
-                                <li><a class="text-bgPrimary hover:text-bgSecondary block pb-2 text-sm" href="/get-a-quote">Get a Quote</a></li>
+                                <li><a class="text-bgPrimary hover:text-bgSecondary block pb-2 text-sm" href="https://wa.me/+916200569546" target="_blank">Get a Quote</a></li>
                             </ul>
                         </div>
                         <div class="w-full lg:w-4/12 px-4 xss:mt-3 md:mt-0">
@@ -286,7 +286,7 @@ if (empty($pageKey)) {
                 fetch(rootURL + "/" + apiSlug + "/updateviewscount");
             }, 30000);
         });
-        const isHome = <?= $pageKey === '' ? true : false ?>;
+        const isHome = <?= json_encode($pageKey === '') ?>;
     </script>
 </body>
 

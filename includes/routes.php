@@ -11,8 +11,8 @@ $routes = [
         'title' => 'Get Quote Form',
         'description' => 'This is the Get Quote Form page',
     ],
-    'pricing-and-plans' => [
-        'file' => 'pricing-and-plans.php',
+    'pricing-plans' => [
+        'file' => 'pricing-plans.php',
         'title' => 'Pricing & Plans | Suman Studio & Films',
         'description' => 'Pricing & Plans',
     ],

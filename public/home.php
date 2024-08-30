@@ -650,7 +650,126 @@ $stmtLatest->close();
         ?>
     </div>
 </div>
+<!-- PRICING SECTION -->
+<div id="pricing" class="container mx-auto px-4 py-16">
+    <div class="container mx-auto text-center mt-6 mb-12">
+        <h2 class="text-3xl font-bold leading-snug text-textPrimary lg:text-4xl">Pricing Plans</h2>
+        <img src="<?= getAsset('heading-decoration.webp', 'images/') ?>" class="h-12 -mt-1 mx-auto" alt="Heading Decoration">
+    </div>
 
+    <div class="grid gap-8 lg:grid-cols-3 lg:gap-12">
+        <div class="flex flex-col p-6 pb-24 text-center bg-bgPrimary rounded-lg border border-textSecondary relative">
+            <h3 class="mb-4 text-2xl font-semibold text-textPrimary">Silver</h3>
+            <p class="font-light text-textSecondary sm:text-lg">Best option for personal use & for your next project.</p>
+            <div class="my-8">
+                <span class="text-4xl font-extrabold text-textPrimary">49,999/-</span>
+            </div>
+            <ul class="mb-8 space-y-4 text-left mx-auto">
+                <li class="flex items-center space-x-3 mx-auto">
+                    <i class="fa fa-check text-yellow-500"></i>
+                    <span class="text-textPrimary">Photo Album: <span class="font-semibold">250 - 300</span></span>
+                </li>
+
+                <li class="flex items-center space-x-3 mx-auto">
+                    <i class="fa fa-check text-yellow-500"></i>
+                    <span class="text-textPrimary">Video highlight + Long Video.</span>
+                </li>
+                <li class="flex items-center space-x-3 mx-auto">
+                    <i class="fa fa-check text-yellow-500"></i>
+                    <span class="text-textPrimary">Two Day Wedding Cinematography.</span>
+                </li>
+                <li class="flex items-center space-x-3 mx-auto">
+                    <i class="fa fa-check text-green-500"></i>
+                    <span class="text-textPrimary">Two Day Wedding Photography.</span>
+                </li>
+                <li class="flex items-center space-x-3 mx-auto">
+                    <i class="fa fa-check text-green-500"></i>
+                    <span class="text-textPrimary">All Soft Copy Video On PenDrive.</span>
+                </li>
+            </ul>
+            <a href="https://wa.me/+916200569546" target="_blank" class="text-bgPrimary bg-primary focus:ring-2 focus:ring-primary ring-offset-2 font-medium rounded-full text-sm px-5 py-2.5 text-center w-[120px] absolute bottom-6 left-1/2 transform -translate-x-1/2">
+                Get started
+            </a>
+        </div>
+
+        <div class="flex flex-col p-6 pb-24 text-center bg-bgPrimary rounded-lg border border-textSecondary relative">
+            <h3 class="mb-4 text-2xl font-semibold text-textPrimary">Gold</h3>
+            <p class="font-light text-textSecondary sm:text-lg">Ideal for those seeking a more comprehensive package.</p>
+            <div class="my-8">
+                <span class="text-4xl font-extrabold text-textPrimary">99,999/-</span>
+            </div>
+            <ul class="mb-24 space-y-4 text-left mx-auto">
+                <li class="flex items-center space-x-3 mx-auto">
+                    <i class="fa fa-check text-yellow-500"></i>
+                    <span class="text-textPrimary">Two Day Wedding Photography.</span>
+                </li>
+                <li class="flex items-center space-x-3 mx-auto">
+                    <i class="fa fa-check text-yellow-500"></i>
+                    <span class="text-textPrimary">Video highlight + Teaser + Long Video.</span>
+                </li>
+                <li class="flex items-center space-x-3 mx-auto">
+                    <i class="fa fa-check text-green-500"></i>
+                    <span class="text-textPrimary">Photo Album: <span class="font-semibold">300 - 350</span></span>
+                </li>
+                <li class="flex items-center space-x-3 mx-auto">
+                    <i class="fa fa-check text-green-500"></i>
+                    <span class="text-textPrimary">Photo + Candid.</span>
+                </li>
+                <li class="flex items-center space-x-3 mx-auto">
+                    <i class="fa fa-check text-green-500"></i>
+                    <span class="text-textPrimary">Video + Cinematography.</span>
+                </li>
+                <li class="flex items-center space-x-3 mx-auto">
+                    <i class="fa fa-check text-green-500"></i>
+                    <span class="text-textPrimary">All Soft Copy Video On PenDrive.</span>
+                </li>
+            </ul>
+            <a href="https://wa.me/+916200569546" target="_blank" class="text-bgPrimary bg-primary focus:ring-2 focus:ring-primary ring-offset-2 font-medium rounded-full text-sm px-5 py-2.5 text-center w-[120px] absolute bottom-6 left-1/2 transform -translate-x-1/2">
+                Get started
+            </a>
+        </div>
+
+        <div class="p-1 bg-gradient-to-tr from-secondary to-primary rounded-lg">
+            <div class="flex flex-col p-6 pb-[104px] text-center bg-bgPrimary rounded-lg border border-textSecondary relative">
+                <h3 class="mb-4 text-2xl font-semibold text-textPrimary">Deluxe</h3>
+                <p class="font-light text-textSecondary sm:text-lg">Perfect for those looking for a premium experience.</p>
+                <div class="my-8">
+                    <span class="text-4xl font-extrabold text-textPrimary">149,999/-</span>
+                </div>
+
+                <ul class="mb-8 space-y-4 text-left mx-auto">
+                    <li class="flex items-center space-x-3 mx-auto">
+                        <i class="fa fa-check text-green-500"></i>
+                        <span class="text-textPrimary">Pre-Wedding + Two Day Wedding Photography.</span>
+                    </li>
+                    <li class="flex items-center space-x-3 mx-auto">
+                        <i class="fa fa-check text-green-500"></i>
+                        <span class="text-textPrimary">Pre-Wedding + Photo + Video.</span>
+                    </li>
+                    <li class="flex items-center space-x-3 mx-auto">
+                        <i class="fa fa-check text-green-500"></i>
+                        <span class="text-textPrimary">Video highlight + Teaser + Reel + Long Video.</span>
+                    </li>
+                    <li class="flex items-center space-x-3 mx-auto">
+                        <i class="fa fa-check text-green-500"></i>
+                        <span class="text-textPrimary">Photo Album: <span class="font-semibold">300 - 350</span></span>
+                    </li>
+                    <li class="flex items-center space-x-3 mx-auto">
+                        <i class="fa fa-check text-green-500"></i>
+                        <span class="text-textPrimary">Wedding Day Photo + Candid.</span>
+                    </li>
+                    <li class="flex items-center space-x-3 mx-auto">
+                        <i class="fa fa-check text-green-500"></i>
+                        <span class="text-textPrimary">Video + Cinematography.</span>
+                    </li>
+                </ul>
+                <a href="https://wa.me/+916200569546" target="_blank" class="text-bgPrimary bg-primary focus:ring-2 focus:ring-primary ring-offset-2 font-medium rounded-full text-sm px-5 py-2.5 text-center w-[120px] absolute bottom-6 left-1/2 transform -translate-x-1/2">
+                    Get started
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- CONTACT SECTION  -->
 <div class="my-20" id="contact"></div>
 <div class="container mx-auto px-4">
@@ -668,7 +787,7 @@ $stmtLatest->close();
                     <div class="mx-4 mb-4">
                         <h3 class="mb-2 text-lg font-medium leading-6 text-textPrimary">Reach Us</h3>
                         <p class="text-textSecondary my-2">We’re here to capture your special moments. Contact us <br>to discuss your wedding photography needs and get a personalized quote.</p>
-                        <p class="text-textSecondary my-2">Website: <a href="/get-a-quote" class="text-primary font-medium hover:underline" target="_blank">Get a quote</a></p>
+                        <p class="text-textSecondary my-2">Website: <a href="https://wa.me/+916200569546" target="_blank" class="text-primary font-medium hover:underline" target="_blank">Get a quote</a></p>
                         <p class="text-textSecondary my-2">Phone Call: <a href="tel:+916200569546" class="text-primary font-medium hover:underline" target="_blank">+91-6200569546</a></p>
                         <p class="text-textSecondary my-2">WhatsApp: <a href="https://wa.me/+916200569546" class="text-primary font-medium hover:underline" target="_blank">+91-6200569546</a></p>
                         <p class="text-textSecondary my-2">E-Mail: <a href="mailto:help@jeevansathistudio.in" class="text-primary font-medium hover:underline" target="_blank">Help@Jeevansathistudio.in</a></p>
