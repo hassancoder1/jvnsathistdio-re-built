@@ -24,14 +24,14 @@
 <div class="container mx-auto px-4 py-8">
     <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
         <!-- Card 1 -->
-        <div class="bg-white rounded-lg overflow-hidden shadow-md">
+        <div class="bg-bgPrimary rounded-lg overflow-hidden border-2">
             <div class="relative">
-                <img src="https://placehold.co/400x300" alt="Traditional photography with bride and groom" class="w-full h-48 object-cover">
+                <img src="<?= getAsset('pricing-traditional.webp', 'images/'); ?>" alt="Traditional photography with bride and groom" class="w-full h-48 object-cover">
                 <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
                     <h1 class="text-2xl text-white font-bold text-center">Traditional</h1>
                 </div>
             </div>
-            <div class="p-4">
+            <div class="p-4 text-center">
                 <p class="text-sm text-gray-600">Full HD Video & Photography</p>
                 <p class="text-sm text-gray-600">Photobook Approx. 200 images</p>
                 <h3 class="text-2xl font-semibold mt-2">₹55000</h3>
@@ -41,14 +41,14 @@
             </div>
         </div>
         <!-- Card 2 -->
-        <div class="bg-white rounded-lg overflow-hidden shadow-md">
+        <div class="bg-bgPrimary rounded-lg overflow-hidden border-2">
             <div class="relative">
-                <img src="https://placehold.co/400x300" alt="Cinematic photography with colorful scene" class="w-full h-48 object-cover">
+                <img src="<?= getAsset('pricing-cinematic.webp', 'images/'); ?>" alt="Cinematic photography with colorful scene" class="w-full h-48 object-cover">
                 <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
                     <h1 class="text-2xl text-white font-bold text-center">Cinematic</h1>
                 </div>
             </div>
-            <div class="p-4">
+            <div class="p-4 text-center">
                 <p class="text-sm text-gray-600">Cinematic Video & Photography</p>
                 <p class="text-sm text-gray-600">Photobook Approx. 200 Images</p>
                 <h3 class="text-2xl font-semibold mt-2">₹85000</h3>
@@ -58,17 +58,17 @@
             </div>
         </div>
         <!-- Card 3 -->
-        <div class="bg-white rounded-lg overflow-hidden shadow-md">
+        <div class="bg-bgPrimary rounded-lg overflow-hidden border-2">
             <div class="relative">
-                <img src="https://placehold.co/400x300" alt="Combo pack with traditional and cinematic photography" class="w-full h-48 object-cover">
+                <img src="<?= getAsset('pricing-combopack.webp', 'images/'); ?>" alt="Combo pack with traditional and cinematic photography" class="w-full h-48 object-cover">
                 <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
                     <h1 class="text-2xl text-white font-bold text-center">Combo Pack</h1>
                 </div>
             </div>
-            <div class="p-4">
+            <div class="p-4 text-center">
                 <p class="text-sm text-gray-600">Traditional Video & Photography</p>
                 <p class="text-sm text-gray-600">Photobook Approx. 200 Images</p>
-                <p class="text-sm text-gray-600">*Candid & Cinematic Shoot on wedding only</p>
+                <p class="text-sm text-gray-600">*Candid & Cinematic Shoot on weddings</p>
                 <h3 class="text-2xl font-semibold mt-2">₹91000</h3>
                 <div class="mt-4 text-center">
                     <a href="https://wa.me/+916200569546" target="_blank" class="inline-flex items-center block rounded-md bg-gradient-to-tr from-secondary to-primary text-sm font-semibold text-bgPrimary shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary mt-4 px-3.5 py-2.5">- Book Now -</a>
@@ -76,14 +76,14 @@
             </div>
         </div>
         <!-- Card 4 -->
-        <div class="bg-white rounded-lg overflow-hidden shadow-md">
+        <div class="bg-bgPrimary rounded-lg overflow-hidden border-2">
             <div class="relative">
-                <img src="https://placehold.co/400x300" alt="Cinematic video and candid photo with dramatic scene" class="w-full h-48 object-cover">
+                <img src="<?= getAsset('pricing-photo-video-candid.webp', 'images/'); ?>" alt="Cinematic video and candid photo with dramatic scene" class="w-full h-48 object-cover">
                 <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
                     <h1 class="text-2xl text-white font-bold text-center">Cinematic Video & Candid Photo</h1>
                 </div>
             </div>
-            <div class="p-4">
+            <div class="p-4 text-center">
                 <p class="text-sm text-gray-600">Cinematic Video & Candid Photography</p>
                 <p class="text-sm text-gray-600">Photobook Approx. 150 images</p>
                 <h3 class="text-2xl font-semibold mt-2">₹121000</h3>
@@ -96,14 +96,14 @@
     <!-- Repeat for other work --> <br><br><br>
     <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         <!-- Card 1 -->
-        <div class="bg-white rounded-lg overflow-hidden shadow-md">
+        <div class="bg-bgPrimary rounded-lg overflow-hidden border-2">
             <div class="relative">
-                <img src="https://placehold.co/400x300" alt="Engagement" class="w-full h-48 object-cover">
+                <img src="<?= getAsset('pricing-engagement.webp', 'images/'); ?>" alt="Engagement" class="w-full h-48 object-cover">
                 <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
                     <h1 class="text-2xl text-white font-bold text-center">Engagement</h1>
                 </div>
             </div>
-            <div class="p-4">
+            <div class="p-4 text-center">
                 <p class="text-sm text-gray-600">Full HD Video & Photography</p>
                 <p class="text-sm text-gray-600">Photobook Approx. 100 Images</p>
                 <h3 class="text-2xl font-semibold mt-2">₹31000</h3>
@@ -113,14 +113,14 @@
             </div>
         </div>
         <!-- Card 2 -->
-        <div class="bg-white rounded-lg overflow-hidden shadow-md">
+        <div class="bg-bgPrimary rounded-lg overflow-hidden border-2">
             <div class="relative">
-                <img src="https://placehold.co/400x300" alt="Single Day Wedding" class="w-full h-48 object-cover">
+                <img src="<?= getAsset('pricing-oneday-wedding.webp', 'images/'); ?>" alt="Single Day Wedding" class="w-full h-48 object-cover">
                 <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
                     <h1 class="text-2xl text-white font-bold text-center">Single Day Wedding</h1>
                 </div>
             </div>
-            <div class="p-4">
+            <div class="p-4 text-center">
                 <p class="text-sm text-gray-600">Cinematic Video & Photography</p>
                 <p class="text-sm text-gray-600">Photobook Approx. 100 Images</p>
                 <h3 class="text-2xl font-semibold mt-2">₹31000</h3>
@@ -130,14 +130,14 @@
             </div>
         </div>
         <!-- Card 3 -->
-        <div class="bg-white rounded-lg overflow-hidden shadow-md">
+        <div class="bg-bgPrimary rounded-lg overflow-hidden border-2">
             <div class="relative">
-                <img src="https://placehold.co/400x300" alt="Combo pack with traditional and cinematic photography" class="w-full h-48 object-cover">
+                <img src="<?= getAsset('pricing-pre-wedding.webp', 'images/'); ?>" alt="Pre Wedding Shoot" class="w-full h-48 object-cover">
                 <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
-                    <h1 class="text-2xl text-white font-bold text-center">Pre Weeding Shoot</h1>
+                    <h1 class="text-2xl text-white font-bold text-center">Pre Wedding Shoot</h1>
                 </div>
             </div>
-            <div class="p-4">
+            <div class="p-4 text-center">
                 <p class="text-sm text-gray-600">Video Teaser</p>
                 <p class="text-sm text-gray-600">Photobook Approx. 80 Images</p>
                 <h3 class="text-2xl font-semibold mt-2">₹35000</h3>
@@ -147,14 +147,14 @@
             </div>
         </div>
         <!-- Card 4 -->
-        <div class="bg-white rounded-lg overflow-hidden shadow-md">
+        <div class="bg-bgPrimary rounded-lg overflow-hidden border-2">
             <div class="relative">
-                <img src="https://placehold.co/400x300" alt="Cinematic video and candid photo with dramatic scene" class="w-full h-48 object-cover">
+                <img src="<?= getAsset('pricing-maternity.webp', 'images/'); ?>" alt="Maternity Photoshoot" class="w-full h-48 object-cover">
                 <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
                     <h1 class="text-2xl text-white font-bold text-center">Maternity Photoshoot</h1>
                 </div>
             </div>
-            <div class="p-4">
+            <div class="p-4 text-center">
                 <p class="text-sm text-gray-600">25 edited pics</p>
                 <p class="text-sm text-gray-600">Photobook approx. 50 images</p>
                 <h3 class="text-2xl font-semibold mt-2">₹21000</h3>
@@ -163,14 +163,14 @@
                 </div>
             </div>
         </div>
-        <div class="bg-white rounded-lg overflow-hidden shadow-md">
+        <div class="bg-bgPrimary rounded-lg overflow-hidden border-2">
             <div class="relative">
-                <img src="https://placehold.co/400x300" alt="Cinematic video and candid photo with dramatic scene" class="w-full h-48 object-cover">
+                <img src="<?= getAsset('pricing-birthday.webp', 'images/'); ?>" alt="Birthday" class="w-full h-48 object-cover">
                 <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
                     <h1 class="text-2xl text-white font-bold text-center">Birthday Photoshoot</h1>
                 </div>
             </div>
-            <div class="p-4">
+            <div class="p-4 text-center">
                 <p class="text-sm text-gray-600">Cinematic Birthday Highlight
                     10 edit image</p>
                 <p class="text-sm text-gray-600">Photobook approx. 80 image</p>
