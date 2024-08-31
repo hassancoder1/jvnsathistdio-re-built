@@ -18,10 +18,12 @@ $isLogin = $page === 'login';
     <?php if (!$isLogin) : ?>
 
         <!-- Sidebar -->
-        <aside class="z-20 fixed top-0 left-0 w-64 h-full bg-bgPrimary border-r-2 border-bgSecondary/40 transform transition-transform duration-300 -translate-x-full md:translate-x-0"
+        <aside class="z-20 fixed top-0 left-0 w-64 h-full bg-bgPrimary border-r-2 border-bgSecondary/40 transform transition-transform duration-300 -translate-x-full md:translate-x-0 overflow-y-scroll"
             :class="{ '-translate-x-0': isSideMenuOpen, '-translate-x-full': !isSideMenuOpen && window.innerWidth < 768 }">
             <div class="py-4">
-                <a class="text-lg px-6 font-bold text-textPrimary" href="/<?= ADMIN_SLUG ?>/home">Cpanel</a>
+                <a class="text-lg px-6 font-bold text-textPrimary" href="/<?= ADMIN_SLUG ?>/home"><?php
+                                                                                                    echo ucwords(str_replace('-', ' ', ADMIN_SLUG));
+                                                                                                    ?></a>
                 <!-- Close button on mobile -->
                 <button class="text-textPrimary float-right cursor-pointer mt-2 md:hidden" @click="isSideMenuOpen = false">
                     <i class="fa fa-times text-lg mr-5 -mt-2 text-textPrimary"></i>
@@ -57,8 +59,19 @@ $isLogin = $page === 'login';
                     <i class="fa fa-bars text-lg text-textPrimary"></i>
                 </button>
                 <!-- Logout button -->
-                <form action="<?= ROOT_URL . API_SLUG ?>/logout" method="POST">
+                <form action="<?= ROOT_URL . API_SLUG ?>/logout" method="POST" class="flex justify-center items-center gap-3">
                     <input type="hidden" name="logout" value="true">
+                    <a href="<?= ROOT_URL; ?>" target="_blank" class="p-2 rounded-md focus:outline-none" title="Open Website">
+                        <i class="fa fa-external-link-alt text-textPrimary"></i>
+                    </a>
+                    <a href=""
+                        x-data="{ spinning: false }"
+                        @click.prevent="spinning = true; window.location.reload();"
+                        class="p-2 rounded-md focus:outline-none"
+                        title="Refresh Page">
+                        <i :class="{ 'animate-spin': spinning }" class="fa fa-refresh text-textPrimary"></i>
+                    </a>
+
                     <button type="submit" class="p-2 rounded-md focus:outline-none" title="logout">
                         <i class="fa fa-arrow-right-from-bracket text-textPrimary"></i>
                     </button>

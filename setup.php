@@ -113,9 +113,9 @@ $stmt_categories->execute();
 $conn->close();
 
 // Optionally, delete the setup script after setup
-// if (file_exists(__FILE__)) {
-//     unlink(__FILE__);
-// }
+if (file_exists(__FILE__)) {
+    unlink(__FILE__);
+}
 
 // Redirect to homepage after setup
 header("Location: /");

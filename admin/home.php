@@ -156,5 +156,11 @@ $colorTheme = json_decode(decryptData($colorTheme['value']), true);
             <span class="text-textPrimary text-2xl"><?= $total_view_count; ?> </span>
             <p class="text-textSecondary mt-2">Since launch | <span class="ml-2">Counted after user spends atleast 30 seconds</span></p>
         </div>
+
+        <div class="text-center text-textPrimary -mb-6 mt-8">
+            <p>Built with <i class="fa fa-heart text-rose-400"></i> by <a href="https://linkedin.com/in/hassancoder" target="_blank" class="text-primary font-medium underline">Hassan Coder.</a></p>
+            <p>HTML, CSS, JS, PHP, MYSQL. | APIs, Public + Admin Pages.</p>
+
+        </div>
     </div>
 </main>

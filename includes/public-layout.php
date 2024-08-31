@@ -65,7 +65,7 @@ if (empty($pageKey)) {
                 ?>
             </div>
             <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-                <a href="/get-a-quote" target="_blank" class="text-sm font-semibold leading-6 <?= $textColor; ?> hero-text">Get a quote</a>
+                <a href="/get-a-quote" class="text-sm font-semibold leading-6 <?= $textColor; ?> hero-text">Get a quote</a>
             </div>
         </nav>
         <div
@@ -122,7 +122,7 @@ if (empty($pageKey)) {
                             ?>
                             <div class="py-6">
                                 <a
-                                    href="/get-a-quote" target="_blank"
+                                    href="/get-a-quote"
                                     class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-textPrimary hover:bg-bgSecondary">Get a quote <i class="fa fa-arrow-right"></i></a>
                             </div>
                         </div>

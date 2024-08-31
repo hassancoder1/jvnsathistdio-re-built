@@ -52,7 +52,6 @@ if ($endPage - $startPage < $maxVisiblePages - 1) {
     <table class="w-full text-sm text-left text-textSecondary">
         <thead class="text-xs text-textSecondary uppercase bg-bgSecondary">
             <tr>
-                <th scope="col" class="px-6 py-3 text-textPrimary">ID</th>
                 <th scope="col" class="px-6 py-3 text-textPrimary">Title</th>
                 <th scope="col" class="px-6 py-3 text-textPrimary">Content</th>
                 <th scope="col" class="px-6 py-3 text-textPrimary">Date</th>
@@ -63,7 +62,6 @@ if ($endPage - $startPage < $maxVisiblePages - 1) {
             <?php if ($result->num_rows > 0): ?>
                 <?php while ($row = $result->fetch_assoc()): ?>
                     <tr class="bg-bgPrimary border-b hover:bg-bgSecondary/40">
-                        <td class="px-6 py-4 font-medium text-textSecondary whitespace-nowrap"><?= htmlspecialchars($row['id'], ENT_QUOTES, 'UTF-8'); ?></td>
                         <td class="px-6 py-4 font-medium text-textSecondary"><?= htmlspecialchars($row['title'], ENT_QUOTES, 'UTF-8'); ?></td>
                         <td class="px-6 py-4 text-textSecondary">
                             <?= htmlspecialchars(substr(strip_tags($row['content']), 0, 30) . '...', ENT_QUOTES, 'UTF-8'); ?>

@@ -75,11 +75,11 @@ foreach ($table_queries as $query) {
 // Prepare encrypted data for default admin records
 $encrypted_json_colortheme = encryptData(json_encode([
     'bgPrimary' => "#ffffff",
-            'bgSecondary' => "#e5e7eb",
-            'textPrimary' => "#0f172a",
-            'textSecondary' => "#6B728F",
-            'primary' => "#ff5c61",
-            'secondary' => "#ffb300"
+    'bgSecondary' => "#e5e7eb",
+    'textPrimary' => "#0f172a",
+    'textSecondary' => "#6B728F",
+    'primary' => "#ff5c61",
+    'secondary' => "#ffb300"
 ]));
 
 $encrypted_json_login = encryptData(json_encode([
@@ -113,9 +113,9 @@ $stmt_categories->execute();
 $conn->close();
 
 // Optionally, delete the setup script after setup
-if (file_exists(__FILE__)) {
-    unlink(__FILE__);
-}
+// if (file_exists(__FILE__)) {
+//     unlink(__FILE__);
+// }
 
 // Redirect to homepage after setup
 header("Location: /");

@@ -697,7 +697,7 @@ $stmtLatest->close();
             </div>
         </div>
 
-        <div class="p-1 bg-gradient-to-tr from-secondary to-primary rounded-lg ring ring-4 ring-secondary">
+        <div class="p-1 bg-gradient-to-tr from-secondary to-primary rounded-lg">
             <div class="flex flex-col p-6 pb-[104px] text-center bg-bgPrimary rounded-lg border border-textSecondary relative">
                 <h3 class="mb-4 text-2xl font-semibold text-textPrimary">Deluxe</h3>
                 <p class="font-light text-textSecondary sm:text-lg">Perfect for those looking for a premium experience.</p>
