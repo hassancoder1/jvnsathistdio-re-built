@@ -67,7 +67,7 @@ $colorTheme = json_decode(decryptData($colorTheme['value']), true);
                                 <?= htmlspecialchars($post['title']); ?> |
                                 <a href="<?= ROOT_URL . ADMIN_SLUG . "/blogpost?id=" . encryptData($post['id']); ?>" class=" ml-2 text-primary"><i class="fa fa-pencil text-textPrimary mr-2"></i></a>
                                 |
-                                <a href="<?= ROOT_URL . API_SLUG . "/deleteblogpost?id=" . encryptData($post['id']); ?>" class="text-red-500 hover:text-red-700"><i class="fa fa-trash-alt text-red-500 mx-2"></i></a>
+                                <span onclick="confirmDelete('<?= ROOT_URL . API_SLUG . '/deleteblogpost?id=' . encryptData($post['id']); ?>')" class="text-red-500 hover:text-red-700 cursor-pointer"><i class="fa fa-trash-alt text-red-500 mx-2"></i></span>
                                 |
                                 <a href="<?= ROOT_URL . SINGLE_BLOG_SLUG . "/" . $post['slug']; ?>" target="_blank" class="text-primary"><i class="fas fa-up-right-from-square text-textPrimary mr-2"></i></a>
                             </span>

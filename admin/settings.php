@@ -178,10 +178,10 @@ if ($category_result->num_rows > 0) {
                 <?php foreach ($categories as $category): ?>
                     <li class="flex justify-between items-center my-2">
                         <span class="text-textPrimary"><?= htmlspecialchars($category['name']); ?></span>
-                        <a href="<?= "/" . API_SLUG . "/deleterecord?id=" . encryptData($category['id']); ?>&table=<?= encryptData('categories'); ?>"
+                        <span onclick="confirmDelete('<?= ROOT_URL . API_SLUG . '/deleterecord?id=' . encryptData($category['id']); ?>&table=<?= encryptData('categories'); ?>')"
                             class="text-red-500 hover:text-red-700">
                             <i class="fa fa-trash-alt"></i>
-                        </a>
+                        </span>
                     </li>
                 <?php endforeach; ?>
             </ul>

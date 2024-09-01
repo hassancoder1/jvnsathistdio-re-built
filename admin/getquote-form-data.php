@@ -77,10 +77,10 @@ if ($endPage - $startPage < $maxVisiblePages - 1) {
                         <td class="px-6 py-4 text-textSecondary"><?= htmlspecialchars($row['details'], ENT_QUOTES, 'UTF-8'); ?></td>
                         <td class="px-6 py-4 text-textSecondary"><?= date('F j, Y, g:i a', strtotime($row['submitted_at'])); ?></td>
                         <td class="px-6 py-4 text-textSecondary text-right">
-                            <a href="<?= "/" . API_SLUG . "/deleterecord?id=" . encryptData($row['id']); ?>&table=<?= encryptData('getquoteform_data'); ?>"
+                            <span onclick="confirmDelete('<?= ROOT_URL . API_SLUG . '/deleterecord?id=' . encryptData($row['id']); ?>&table=<?= encryptData('getquoteform_data'); ?>')"
                                 class="text-red-500 hover:text-red-700">
                                 <i class="fa fa-trash-alt"></i>
-                            </a>
+                            </span>
                         </td>
                     </tr>
                 <?php endwhile; ?>
