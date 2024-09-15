@@ -82,34 +82,36 @@ $isLogin = $page === 'login';
             <main class="overflow-y-auto p-6 mt-16 bg-bgPrimary">
                 <?php include ADMIN_PAGES . $pageDetails['file']; ?>
 
-<!-- Delete modal -->
-<div id="deleteModal" class="hidden overflow-hidden fixed top-0 left-0 z-50 bg-slate-900/50 flex justify-center items-center w-full h-screen">
-    <div class="relative flex justify-center items-center p-4 w-full max-w-md h-full md:h-auto">
-        <!-- Modal content -->
-        <div class="relative p-4 text-center bg-bgPrimary rounded-lg shadow sm:p-5">
-            <button id="closeBtn" class="text-textPrimary absolute top-2.5 right-2.5 bg-transparent hover:bg-bgSecondary/30 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-            </button>
-            <svg class="text-textSecondary w-11 h-11 mb-3.5 mx-auto" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
-            <p class="mb-4 text-textPrimary">Are you sure you want to delete this item?</p>
-            <div class="flex justify-center items-center space-x-4">
-                <button id="cancelBtn" class="py-2 px-3 text-sm font-medium text-textPrimary bg-bgPrimary rounded-lg border border-2 hover:bg-bgSecondary/30 focus:ring-4 focus:outline-none focus:ring-primary focus:z-10">
-                    No, cancel
-                </button>
-                <button id="yesBtn" class="py-2 px-3 text-sm font-medium text-center text-bgPrimary bg-red-500 rounded-lg hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-red-700">
-                    Yes, I'm sure
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
+                <!-- Delete modal -->
+                <div id="deleteModal" class="hidden overflow-hidden fixed top-0 left-0 z-50 bg-slate-900/50 flex justify-center items-center w-full h-screen">
+                    <div class="relative flex justify-center items-center p-4 w-full max-w-md h-full md:h-auto">
+                        <!-- Modal content -->
+                        <div class="relative p-4 text-center bg-bgPrimary rounded-lg shadow sm:p-5">
+                            <button id="closeBtn" class="text-textPrimary absolute top-2.5 right-2.5 bg-transparent hover:bg-bgSecondary/30 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                            <svg class="text-textSecondary w-11 h-11 mb-3.5 mx-auto" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"></path>
+                            </svg>
+                            <p class="mb-4 text-textPrimary">Are you sure you want to delete this item?</p>
+                            <div class="flex justify-center items-center space-x-4">
+                                <button id="cancelBtn" class="py-2 px-3 text-sm font-medium text-textPrimary bg-bgPrimary rounded-lg border border-2 hover:bg-bgSecondary/30 focus:ring-4 focus:outline-none focus:ring-primary focus:z-10">
+                                    No, cancel
+                                </button>
+                                <button id="yesBtn" class="py-2 px-3 text-sm font-medium text-center text-bgPrimary bg-red-500 rounded-lg hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-red-700">
+                                    Yes, I'm sure
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </main>
         </div>
 
-    <?php else :
-    header("location: ".ROOT_URL.ADMIN_SLUG."/login");
-         ?>
+    <?php else :  ?>
 
         <!-- Load login content -->
         <?php include ADMIN_PAGES . $pageDetails['file']; ?>
@@ -118,20 +120,20 @@ $isLogin = $page === 'login';
 
     <?php include INCLUDES . "footer.php"; ?>
     <script>
-    window.confirmDelete = function(deleteURL) {
-        let deleteModal = document.getElementById("deleteModal");
-        deleteModal.classList.remove('hidden');
-        document.getElementById("closeBtn").onclick = () => {
-            deleteModal.classList.add('hidden');
+        window.confirmDelete = function(deleteURL) {
+            let deleteModal = document.getElementById("deleteModal");
+            deleteModal.classList.remove('hidden');
+            document.getElementById("closeBtn").onclick = () => {
+                deleteModal.classList.add('hidden');
+            };
+            document.getElementById("cancelBtn").onclick = () => {
+                deleteModal.classList.add('hidden');
+            };
+            document.getElementById("yesBtn").onclick = () => {
+                window.location.href = deleteURL;
+            };
         };
-        document.getElementById("cancelBtn").onclick = () => {
-            deleteModal.classList.add('hidden');
-        };
-        document.getElementById("yesBtn").onclick = () => {
-            window.location.href = deleteURL;
-        };
-    };
-</script>
+    </script>
 
 </body>
 

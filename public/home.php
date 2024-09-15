@@ -313,7 +313,7 @@ $initialImage = !empty($heroImages) ? $heroImages[0] : getAsset('default-hero.we
 
         <div class="grid gap-2">
             <div class="mt-8">
-                <img class="main-image min-h-[300px] max-h-[380px] ring-primary ring-2 ring-offset-2 max-w-full mx-auto rounded-lg" src="" alt="Open Modal Image" loading="lazy">
+                <img class="main-image min-h-[300px] max-h-[350px] ring-primary ring-2 ring-offset-2 max-w-full mx-auto rounded-lg" src="" alt="Open Modal Image" loading="lazy">
             </div>
             <div class="flex justify-start items-center gap-4 overflow-x-auto w-full px-2 md:px-8 py-3 thumbnails">
                 <!-- Thumbnails will be populated dynamically -->

@@ -1,15 +1,15 @@
 <?php
 // Define Database Credentials for Live Site 
-// $server = "fdb1029.awardspace.net";
-// $username = "3742499_jvnstudio";
-// $password = "Hass1234an";
-// $database = "3742499_jvnstudio";
+$server = "fdb1029.awardspace.net";
+$username = "3742499_jvnstudio";
+$password = "Hass1234an";
+$database = "3742499_jvnstudio";
 
 // For LocalHost development
-$server = "localhost";
-$username = "root";
-$password = "";
-$database = "jvnstudio_new";
+// $server = "localhost";
+// $username = "root";
+// $password = "";
+// $database = "jvnstudio_new";
 
 // Function to render error screen
 function renderErrorScreen($errorMessage)
